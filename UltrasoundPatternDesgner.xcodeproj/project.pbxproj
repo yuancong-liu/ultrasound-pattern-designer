@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22036DFC2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036DFB2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift */; };
+		22036DFE2728835700FD6743 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036DFD2728835700FD6743 /* ContentView.swift */; };
+		22036E002728835700FD6743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22036DFF2728835700FD6743 /* Assets.xcassets */; };
+		22036E032728835700FD6743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22036E022728835700FD6743 /* Preview Assets.xcassets */; };
+		22036E0E2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E0D2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift */; };
+		22036E182728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */; };
+		22036E1A2728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22036E0A2728835800FD6743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22036DF02728835600FD6743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22036DF72728835600FD6743;
+			remoteInfo = UltrasoundPatternDesgner;
+		};
+		22036E142728835800FD6743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22036DF02728835600FD6743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22036DF72728835600FD6743;
+			remoteInfo = UltrasoundPatternDesgner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22036DF82728835700FD6743 /* UltrasoundPatternDesgner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltrasoundPatternDesgner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22036DFB2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerApp.swift; sourceTree = "<group>"; };
+		22036DFD2728835700FD6743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		22036DFF2728835700FD6743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22036E022728835700FD6743 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		22036E042728835700FD6743 /* UltrasoundPatternDesgner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltrasoundPatternDesgner.entitlements; sourceTree = "<group>"; };
+		22036E092728835800FD6743 /* UltrasoundPatternDesgnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltrasoundPatternDesgnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22036E0D2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerTests.swift; sourceTree = "<group>"; };
+		22036E132728835800FD6743 /* UltrasoundPatternDesgnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltrasoundPatternDesgnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITests.swift; sourceTree = "<group>"; };
+		22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22036DF52728835600FD6743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22036E062728835800FD6743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22036E102728835800FD6743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22036DEF2728835600FD6743 = {
+			isa = PBXGroup;
+			children = (
+				22036DFA2728835700FD6743 /* UltrasoundPatternDesgner */,
+				22036E0C2728835800FD6743 /* UltrasoundPatternDesgnerTests */,
+				22036E162728835800FD6743 /* UltrasoundPatternDesgnerUITests */,
+				22036DF92728835700FD6743 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22036DF92728835700FD6743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22036DF82728835700FD6743 /* UltrasoundPatternDesgner.app */,
+				22036E092728835800FD6743 /* UltrasoundPatternDesgnerTests.xctest */,
+				22036E132728835800FD6743 /* UltrasoundPatternDesgnerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22036DFA2728835700FD6743 /* UltrasoundPatternDesgner */ = {
+			isa = PBXGroup;
+			children = (
+				22036DFB2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift */,
+				22036DFD2728835700FD6743 /* ContentView.swift */,
+				22036DFF2728835700FD6743 /* Assets.xcassets */,
+				22036E042728835700FD6743 /* UltrasoundPatternDesgner.entitlements */,
+				22036E012728835700FD6743 /* Preview Content */,
+			);
+			path = UltrasoundPatternDesgner;
+			sourceTree = "<group>";
+		};
+		22036E012728835700FD6743 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				22036E022728835700FD6743 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22036E0C2728835800FD6743 /* UltrasoundPatternDesgnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				22036E0D2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift */,
+			);
+			path = UltrasoundPatternDesgnerTests;
+			sourceTree = "<group>";
+		};
+		22036E162728835800FD6743 /* UltrasoundPatternDesgnerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */,
+				22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */,
+			);
+			path = UltrasoundPatternDesgnerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22036DF72728835600FD6743 /* UltrasoundPatternDesgner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22036E1D2728835800FD6743 /* Build configuration list for PBXNativeTarget "UltrasoundPatternDesgner" */;
+			buildPhases = (
+				22036DF42728835600FD6743 /* Sources */,
+				22036DF52728835600FD6743 /* Frameworks */,
+				22036DF62728835600FD6743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UltrasoundPatternDesgner;
+			productName = UltrasoundPatternDesgner;
+			productReference = 22036DF82728835700FD6743 /* UltrasoundPatternDesgner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22036E082728835800FD6743 /* UltrasoundPatternDesgnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22036E202728835800FD6743 /* Build configuration list for PBXNativeTarget "UltrasoundPatternDesgnerTests" */;
+			buildPhases = (
+				22036E052728835800FD6743 /* Sources */,
+				22036E062728835800FD6743 /* Frameworks */,
+				22036E072728835800FD6743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22036E0B2728835800FD6743 /* PBXTargetDependency */,
+			);
+			name = UltrasoundPatternDesgnerTests;
+			productName = UltrasoundPatternDesgnerTests;
+			productReference = 22036E092728835800FD6743 /* UltrasoundPatternDesgnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22036E122728835800FD6743 /* UltrasoundPatternDesgnerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22036E232728835800FD6743 /* Build configuration list for PBXNativeTarget "UltrasoundPatternDesgnerUITests" */;
+			buildPhases = (
+				22036E0F2728835800FD6743 /* Sources */,
+				22036E102728835800FD6743 /* Frameworks */,
+				22036E112728835800FD6743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22036E152728835800FD6743 /* PBXTargetDependency */,
+			);
+			name = UltrasoundPatternDesgnerUITests;
+			productName = UltrasoundPatternDesgnerUITests;
+			productReference = 22036E132728835800FD6743 /* UltrasoundPatternDesgnerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22036DF02728835600FD6743 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					22036DF72728835600FD6743 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					22036E082728835800FD6743 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 22036DF72728835600FD6743;
+					};
+					22036E122728835800FD6743 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 22036DF72728835600FD6743;
+					};
+				};
+			};
+			buildConfigurationList = 22036DF32728835600FD6743 /* Build configuration list for PBXProject "UltrasoundPatternDesgner" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22036DEF2728835600FD6743;
+			productRefGroup = 22036DF92728835700FD6743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22036DF72728835600FD6743 /* UltrasoundPatternDesgner */,
+				22036E082728835800FD6743 /* UltrasoundPatternDesgnerTests */,
+				22036E122728835800FD6743 /* UltrasoundPatternDesgnerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22036DF62728835600FD6743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22036E032728835700FD6743 /* Preview Assets.xcassets in Resources */,
+				22036E002728835700FD6743 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22036E072728835800FD6743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22036E112728835800FD6743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22036DF42728835600FD6743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22036DFE2728835700FD6743 /* ContentView.swift in Sources */,
+				22036DFC2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22036E052728835800FD6743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22036E0E2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22036E0F2728835800FD6743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22036E182728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift in Sources */,
+				22036E1A2728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22036E0B2728835800FD6743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22036DF72728835600FD6743 /* UltrasoundPatternDesgner */;
+			targetProxy = 22036E0A2728835800FD6743 /* PBXContainerItemProxy */;
+		};
+		22036E152728835800FD6743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22036DF72728835600FD6743 /* UltrasoundPatternDesgner */;
+			targetProxy = 22036E142728835800FD6743 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22036E1B2728835800FD6743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22036E1C2728835800FD6743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		22036E1E2728835800FD6743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UltrasoundPatternDesgner/UltrasoundPatternDesgner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UltrasoundPatternDesgner/Preview Content\"";
+				DEVELOPMENT_TEAM = XBN9N2TPV3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "YUAN-TSUNG.UltrasoundPatternDesgner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		22036E1F2728835800FD6743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UltrasoundPatternDesgner/UltrasoundPatternDesgner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UltrasoundPatternDesgner/Preview Content\"";
+				DEVELOPMENT_TEAM = XBN9N2TPV3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "YUAN-TSUNG.UltrasoundPatternDesgner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		22036E212728835800FD6743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XBN9N2TPV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "YUAN-TSUNG.UltrasoundPatternDesgnerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UltrasoundPatternDesgner.app/Contents/MacOS/UltrasoundPatternDesgner";
+			};
+			name = Debug;
+		};
+		22036E222728835800FD6743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XBN9N2TPV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "YUAN-TSUNG.UltrasoundPatternDesgnerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UltrasoundPatternDesgner.app/Contents/MacOS/UltrasoundPatternDesgner";
+			};
+			name = Release;
+		};
+		22036E242728835800FD6743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XBN9N2TPV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "YUAN-TSUNG.UltrasoundPatternDesgnerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = UltrasoundPatternDesgner;
+			};
+			name = Debug;
+		};
+		22036E252728835800FD6743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XBN9N2TPV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "YUAN-TSUNG.UltrasoundPatternDesgnerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = UltrasoundPatternDesgner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22036DF32728835600FD6743 /* Build configuration list for PBXProject "UltrasoundPatternDesgner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22036E1B2728835800FD6743 /* Debug */,
+				22036E1C2728835800FD6743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22036E1D2728835800FD6743 /* Build configuration list for PBXNativeTarget "UltrasoundPatternDesgner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22036E1E2728835800FD6743 /* Debug */,
+				22036E1F2728835800FD6743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22036E202728835800FD6743 /* Build configuration list for PBXNativeTarget "UltrasoundPatternDesgnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22036E212728835800FD6743 /* Debug */,
+				22036E222728835800FD6743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22036E232728835800FD6743 /* Build configuration list for PBXNativeTarget "UltrasoundPatternDesgnerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22036E242728835800FD6743 /* Debug */,
+				22036E252728835800FD6743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22036DF02728835600FD6743 /* Project object */;
+}
