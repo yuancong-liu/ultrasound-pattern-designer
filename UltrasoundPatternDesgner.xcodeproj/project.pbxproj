@@ -14,6 +14,9 @@
 		22036E0E2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E0D2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift */; };
 		22036E182728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */; };
 		22036E1A2728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */; };
+		227C3F5827293975004B54AD /* UserCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C3F5727293975004B54AD /* UserCanvas.swift */; };
+		227C3F5A272939CA004B54AD /* UserShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C3F59272939CA004B54AD /* UserShapes.swift */; };
+		227C3F5C27293D17004B54AD /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C3F5B27293D17004B54AD /* BadgeBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		22036E132728835800FD6743 /* UltrasoundPatternDesgnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltrasoundPatternDesgnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITests.swift; sourceTree = "<group>"; };
 		22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		227C3F5727293975004B54AD /* UserCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCanvas.swift; sourceTree = "<group>"; };
+		227C3F59272939CA004B54AD /* UserShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShapes.swift; sourceTree = "<group>"; };
+		227C3F5B27293D17004B54AD /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 			children = (
 				22036DFB2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift */,
 				22036DFD2728835700FD6743 /* ContentView.swift */,
+				227C3F5727293975004B54AD /* UserCanvas.swift */,
+				227C3F59272939CA004B54AD /* UserShapes.swift */,
+				227C3F5B27293D17004B54AD /* BadgeBackground.swift */,
 				22036DFF2728835700FD6743 /* Assets.xcassets */,
 				22036E042728835700FD6743 /* UltrasoundPatternDesgner.entitlements */,
 				22036E012728835700FD6743 /* Preview Content */,
@@ -260,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22036DFE2728835700FD6743 /* ContentView.swift in Sources */,
+				227C3F5827293975004B54AD /* UserCanvas.swift in Sources */,
+				227C3F5A272939CA004B54AD /* UserShapes.swift in Sources */,
+				227C3F5C27293D17004B54AD /* BadgeBackground.swift in Sources */,
 				22036DFC2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

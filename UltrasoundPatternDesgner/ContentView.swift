@@ -9,8 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            HStack {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Text("Button1")
+                }
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Text("Button2")
+                }
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Text("Button3")
+                }
+                ColorPicker("Picker", selection: .constant(.blue))
+            }
+            .padding(5)
+            Divider()
+            HStack {
+                BadgeBackground().padding()
+                Spacer()
+                Divider()
+                ControlGroup() {
+                    Text("hello")
+                }
+                .padding()
+                .frame(maxWidth: 200)
+            }
+        }
+        
     }
 }
 
