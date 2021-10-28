@@ -9,29 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Button1")
+                    Image(systemName: "circle")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
                 }
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Button2")
+                    Image(systemName: "square")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
                 }
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Button3")
+                    Image(systemName: "triangle")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
                 }
                 ColorPicker("Picker", selection: .constant(.blue))
             }
-            .padding(5)
-            Divider()
+            .padding(10)
             HStack {
                 BadgeBackground().padding()
                 Spacer()
                 Divider()
                 ControlGroup() {
                     Text("hello")
+                    
                 }
-                .padding()
+                .padding(5)
                 .frame(maxWidth: 200)
             }
         }
