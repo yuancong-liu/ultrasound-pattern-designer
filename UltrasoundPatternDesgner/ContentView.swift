@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var showPatterns = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -26,11 +29,15 @@ struct ContentView: View {
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
-                ColorPicker("Picker", selection: .constant(.blue))
+                Toggle(isOn: $showPatterns) {
+                    Text("Show pattern")
+                }.toggleStyle(.switch)
             }
             .padding(10)
             HStack {
-                BadgeBackground().padding()
+                if showPatterns {
+                    BadgeBackground().padding()
+                }
                 Spacer()
                 Divider()
                 ControlGroup() {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserCanvas: View {
+    
     var body: some View {
         BadgeBackground()
     }
