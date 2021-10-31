@@ -8,7 +8,24 @@
 import Foundation
 import SwiftUI
 
+var testList = [Shapes]()
+var idUsed = 0
+
 class Shapes {
+    
+    
+    var id: Int
+    var name: String
+    var category: Category
+    var isShown: Bool
+    
+    enum Category: CaseIterable, Codable, Hashable {
+        case cir
+        case tri
+        case squ
+    }
+    
+    
     var centroid: CGPoint
     
     var width: CGFloat
@@ -17,7 +34,7 @@ class Shapes {
     var rotation: Angle
     
     // initialiser
-    init(_ startingPoint: CGPoint, _ endingPoint: CGPoint) {
+    init(_ startingPoint: CGPoint, _ endingPoint: CGPoint, _ category: Category) {
         self.width = abs(startingPoint.x - endingPoint.x)
         self.height = abs(startingPoint.y - endingPoint.y)
         
@@ -27,6 +44,12 @@ class Shapes {
         )
         
         self.rotation = .degrees(0)
+        
+        self.id = idUsed + 1
+        idUsed += 1
+        self.name = "Obejct"
+        self.category = category
+        self.isShown = true
     }
     
 }

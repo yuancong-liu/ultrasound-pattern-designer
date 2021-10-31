@@ -60,13 +60,8 @@ struct ContentView: View {
                 Spacer()
                 Divider()
                 VStack (alignment: .leading) {
-                    VStack (alignment: .leading) {
-                        Text("Objects")
-                            .bold()
-                            .font(.title2)
-                            .padding()
-//                        List
-                    }
+                    
+                    ObjectsView()
                     
                     VStack (alignment: .leading) {
                         Text("Properties")
