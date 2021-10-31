@@ -17,6 +17,7 @@
 		227C3F5827293975004B54AD /* UserCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C3F5727293975004B54AD /* UserCanvas.swift */; };
 		22B91FCD272E7184009B4253 /* DrawShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91FCC272E7184009B4253 /* DrawShapes.swift */; };
 		22B91FCF272E7F7C009B4253 /* ObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91FCE272E7F7C009B4253 /* ObjectsView.swift */; };
+		22B91FD3272ED398009B4253 /* PropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91FD2272ED398009B4253 /* PropertiesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		227C3F5727293975004B54AD /* UserCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCanvas.swift; sourceTree = "<group>"; };
 		22B91FCC272E7184009B4253 /* DrawShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapes.swift; sourceTree = "<group>"; };
 		22B91FCE272E7F7C009B4253 /* ObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsView.swift; sourceTree = "<group>"; };
+		22B91FD2272ED398009B4253 /* PropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				22036DFB2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift */,
 				22036DFD2728835700FD6743 /* ContentView.swift */,
 				22B91FCE272E7F7C009B4253 /* ObjectsView.swift */,
+				22B91FD2272ED398009B4253 /* PropertiesView.swift */,
 				227C3F5727293975004B54AD /* UserCanvas.swift */,
 				22B91FCC272E7184009B4253 /* DrawShapes.swift */,
 				22036DFF2728835700FD6743 /* Assets.xcassets */,
@@ -271,6 +274,7 @@
 				22B91FCF272E7F7C009B4253 /* ObjectsView.swift in Sources */,
 				22036DFE2728835700FD6743 /* ContentView.swift in Sources */,
 				227C3F5827293975004B54AD /* UserCanvas.swift in Sources */,
+				22B91FD3272ED398009B4253 /* PropertiesView.swift in Sources */,
 				22036DFC2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift in Sources */,
 				22B91FCD272E7184009B4253 /* DrawShapes.swift in Sources */,
 			);

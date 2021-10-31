@@ -42,18 +42,24 @@ struct ContentView: View {
                         .bold()
                 }.toggleStyle(.switch)
             }
-            .padding(10)
+            .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
+            Divider()
             
             HStack (alignment: .top) {
                 VStack (alignment: .leading) {
-                    Text("Canvas")
-                        .bold()
-                        .font(.title2)
-                        .padding()
+                    
+                    HStack {
+                        Image(systemName: "paintbrush.fill")
+                            .imageScale(.large)
+                        Text("Canvas")
+                            .bold()
+                            .font(.title2)
+                    }
+                    .padding(.leading, 10)
                     
                     Spacer()
                     
-                    UserCanvas().padding()
+                    UserCanvas()
                 }
                 
                 
@@ -62,16 +68,10 @@ struct ContentView: View {
                 VStack (alignment: .leading) {
                     
                     ObjectsView()
+                    PropertiesView()
                     
-                    VStack (alignment: .leading) {
-                        Text("Properties")
-                            .bold()
-                            .font(.title2)
-                            .padding()
-                    }
                 }
-                
-                .padding(5)
+                .padding(.horizontal, 5)
                 .frame(maxWidth: 200)
             }
         }
