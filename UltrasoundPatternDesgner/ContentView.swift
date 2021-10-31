@@ -29,21 +29,53 @@ struct ContentView: View {
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Image(systemName: "star")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
+                }
+                
+                Spacer()
+                
                 Toggle(isOn: $showPatterns) {
-                    Text("Show pattern")
+                    Text("Alignments")
+                        .bold()
                 }.toggleStyle(.switch)
             }
             .padding(10)
-            HStack {
-                if showPatterns {
-                    BadgeBackground().padding()
+            
+            HStack (alignment: .top) {
+                VStack (alignment: .leading) {
+                    Text("Canvas")
+                        .bold()
+                        .font(.title2)
+                        .padding()
+                    
+                    Spacer()
+                    
+                    UserCanvas().padding()
                 }
+                
+                
                 Spacer()
                 Divider()
-                ControlGroup() {
-                    Text("hello")
+                VStack (alignment: .leading) {
+                    VStack (alignment: .leading) {
+                        Text("Objects")
+                            .bold()
+                            .font(.title2)
+                            .padding()
+//                        List
+                    }
                     
+                    VStack (alignment: .leading) {
+                        Text("Properties")
+                            .bold()
+                            .font(.title2)
+                            .padding()
+                    }
                 }
+                
                 .padding(5)
                 .frame(maxWidth: 200)
             }
@@ -54,6 +86,10 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                
+            ContentView()
+        }
     }
 }
