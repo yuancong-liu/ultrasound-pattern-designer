@@ -68,6 +68,7 @@ struct ContentView: View {
                 VStack (alignment: .leading) {
                     
                     ObjectsView()
+                    Divider()
                     PropertiesView()
                     
                 }

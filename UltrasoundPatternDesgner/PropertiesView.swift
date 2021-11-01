@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PropertiesView: View {
+    
+    @State var userShape: UserShape = UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100))
+    
     var body: some View {
         VStack (alignment: .leading) {
             HStack {
@@ -16,6 +19,25 @@ struct PropertiesView: View {
                 Text("Properties")
                     .bold()
                     .font(.title2)
+            }
+            
+            List {
+                HStack {
+                    Text("Name:")
+                    TextField("\(userShape.name)", text: $userShape.name)
+                }
+                HStack {
+                    Text("Wdith:")
+                    Text(userShape.width.description)
+                }
+                HStack {
+                    Text("Height:")
+                    Text(userShape.height.description)
+                }
+                HStack {
+                    Text("Rotation:")
+                    Text(userShape.rotation.description)
+                }
             }
         }
     }
