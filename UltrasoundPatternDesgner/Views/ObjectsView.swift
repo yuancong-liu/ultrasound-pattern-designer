@@ -43,7 +43,7 @@ struct ObjectsViewRow: View {
                     Image(systemName: "triangle.fill")
                         .imageScale(.medium)
                 case "rectangle":
-                    Image(systemName: "rectangle.fill")
+                    Image(systemName: "square.fill")
                         .imageScale(.medium)
                 default:
                     Image(systemName: "star.fill")

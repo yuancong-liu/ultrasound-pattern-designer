@@ -30,11 +30,11 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }
                 
-                Button(action: addOne) {
-                    Text("Button")
-                }
+//                Button(action: addOne) {
+//                    Text("Button")
+//                }
                 
-                Text(variable.description)
+//                Text(variable.description)
                 
                 
                 Spacer()
