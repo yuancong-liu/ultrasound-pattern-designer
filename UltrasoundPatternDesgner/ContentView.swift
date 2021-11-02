@@ -14,26 +14,28 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: createCircle) {
                     Image(systemName: "circle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: createRectangle) {
                     Image(systemName: "square")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: createTriangle) {
                     Image(systemName: "triangle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Image(systemName: "star")
-                        .imageScale(.medium)
-                        .foregroundColor(.blue)
+                
+                Button(action: addOne) {
+                    Text("Button")
                 }
+                
+                Text(variable.description)
+                
                 
                 Spacer()
                 
@@ -68,12 +70,13 @@ struct ContentView: View {
                 VStack (alignment: .leading) {
                     
                     ObjectsView()
+                        .frame(height: 200)
                     Divider()
-                    PropertiesView()
+                    PropertiesView(userShape: currentShapes[0])
                     
                 }
                 .padding(.horizontal, 5)
-                .frame(maxWidth: 200)
+                .frame(maxWidth: 300)
             }
         }
         

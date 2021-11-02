@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PropertiesView: View {
     
-    @State var userShape: UserShape = UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100))
+    @State var userShape: UserShape
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -38,6 +38,10 @@ struct PropertiesView: View {
                     Text("Rotation:")
                     Text(userShape.rotation.description)
                 }
+                HStack {
+                    Text("ID:")
+                    Text(userShape.id.description)
+                }
             }
         }
     }
@@ -45,6 +49,6 @@ struct PropertiesView: View {
 
 struct PropertiesView_Previews: PreviewProvider {
     static var previews: some View {
-        PropertiesView()
+        PropertiesView(userShape: currentShapes[0])
     }
 }

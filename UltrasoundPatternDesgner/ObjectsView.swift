@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ObjectsView: View {
     
-//    var sampleObjects = [Object]()
-//    sampleObjects.append()
+    @State var userShape: [UserShape] = currentShapes
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -22,22 +21,35 @@ struct ObjectsView: View {
                     .font(.title2)
             }
             
-            List {
-                ObjectsViewRow()
-                
+            List(userShape) { shape in
+                ObjectsViewRow(userShape: shape)
             }
         }
     }
 }
 
+
 struct ObjectsViewRow: View {
     
-    @State var userShape: UserShape = UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100))
+    @State var userShape: UserShape
     
     var body: some View {
         HStack {
-            Image(systemName: "circle.fill")
-                .imageScale(.medium)
+            switch userShape.shapeCategory {
+                case "circle":
+                    Image(systemName: "circle.fill")
+                        .imageScale(.medium)
+                case "triangle":
+                    Image(systemName: "triangle.fill")
+                        .imageScale(.medium)
+                case "rectangle":
+                    Image(systemName: "rectangle.fill")
+                        .imageScale(.medium)
+                default:
+                    Image(systemName: "star.fill")
+                        .imageScale(.medium)
+            }
+            
             Text(userShape.name)
             Spacer()
             Toggle(isOn: $userShape.isShown) {

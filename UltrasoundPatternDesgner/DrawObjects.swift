@@ -15,6 +15,7 @@ struct UserShape: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var isShown: Bool
+    var shapeCategory: String
     
     var width: Double
     var height: Double
@@ -34,7 +35,7 @@ struct UserShape: Hashable, Codable, Identifiable {
     var rotation: Double
     
     
-    init(_ startingPoint: CGPoint, _ endingPoint: CGPoint) {
+    init(_ startingPoint: CGPoint, _ endingPoint: CGPoint, _ shapeCategory: String) {
         self.width = abs(startingPoint.x - endingPoint.x)
         self.height = abs(startingPoint.y - endingPoint.y)
 
@@ -44,7 +45,8 @@ struct UserShape: Hashable, Codable, Identifiable {
         
         self.id = idUsed + 1
         idUsed += 1
-        self.name = "Obejct"
+        self.name = "Obejct" + "\(self.id)"
         self.isShown = true
+        self.shapeCategory = shapeCategory
     }
 }
