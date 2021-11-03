@@ -20,9 +20,17 @@ struct ObjectsView: View {
                     .bold()
                     .font(.title2)
             }
-            List(modelData.currentShapes) { shape in
-                ObjectsViewRow(userShape: shape)
+            NavigationView{
+                List(modelData.currentShapes) { shape in
+                    NavigationLink {
+                        PropertiesView(userShape: shape)
+                    } label: {
+                        ObjectsViewRow(userShape: shape)
+                    }
+                    
+                }
             }
+            .navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
     }
 }

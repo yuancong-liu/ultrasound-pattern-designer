@@ -47,7 +47,7 @@ struct ContentView: View {
             .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
             Divider()
             
-            HStack (alignment: .top) {
+            VStack (alignment: .leading) {
                 VStack (alignment: .leading) {
                     
                     HStack {
@@ -67,16 +67,7 @@ struct ContentView: View {
                 
                 Spacer()
                 Divider()
-                VStack (alignment: .leading) {
-                    
-                    ObjectsView()
-                        .frame(height: 200)
-                    Divider()
-                    PropertiesView(userShape: ModelData().currentShapes[0])
-                    
-                }
-                .padding(.horizontal, 5)
-                .frame(maxWidth: 300)
+                ObjectsView()
             }
         }
         
