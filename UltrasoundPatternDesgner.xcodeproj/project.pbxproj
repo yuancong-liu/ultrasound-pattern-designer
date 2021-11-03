@@ -14,6 +14,7 @@
 		22036E0E2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E0D2728835800FD6743 /* UltrasoundPatternDesgnerTests.swift */; };
 		22036E182728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */; };
 		22036E1A2728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */; };
+		221A24772732728D00BCA708 /* ObjectsViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221A24762732728D00BCA708 /* ObjectsViewRow.swift */; };
 		227C3F5827293975004B54AD /* UserCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C3F5727293975004B54AD /* UserCanvasView.swift */; };
 		22B91FCD272E7184009B4253 /* DrawObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91FCC272E7184009B4253 /* DrawObjects.swift */; };
 		22B91FCF272E7F7C009B4253 /* ObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91FCE272E7F7C009B4253 /* ObjectsView.swift */; };
@@ -50,6 +51,7 @@
 		22036E132728835800FD6743 /* UltrasoundPatternDesgnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltrasoundPatternDesgnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITests.swift; sourceTree = "<group>"; };
 		22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		221A24762732728D00BCA708 /* ObjectsViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsViewRow.swift; sourceTree = "<group>"; };
 		227C3F5727293975004B54AD /* UserCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCanvasView.swift; sourceTree = "<group>"; };
 		22B91FCC272E7184009B4253 /* DrawObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawObjects.swift; sourceTree = "<group>"; };
 		22B91FCE272E7F7C009B4253 /* ObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				22036DFD2728835700FD6743 /* ContentView.swift */,
+				221A24762732728D00BCA708 /* ObjectsViewRow.swift */,
 				22B91FCE272E7F7C009B4253 /* ObjectsView.swift */,
 				22B91FD2272ED398009B4253 /* PropertiesView.swift */,
 				227C3F5727293975004B54AD /* UserCanvasView.swift */,
@@ -294,6 +297,7 @@
 				22036DFE2728835700FD6743 /* ContentView.swift in Sources */,
 				22CF01B027316F2000E890CC /* UserData.swift in Sources */,
 				227C3F5827293975004B54AD /* UserCanvasView.swift in Sources */,
+				221A24772732728D00BCA708 /* ObjectsViewRow.swift in Sources */,
 				22B91FD3272ED398009B4253 /* PropertiesView.swift in Sources */,
 				22036DFC2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift in Sources */,
 				22B91FCD272E7184009B4253 /* DrawObjects.swift in Sources */,

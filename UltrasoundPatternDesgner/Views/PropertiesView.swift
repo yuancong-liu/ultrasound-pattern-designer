@@ -49,6 +49,6 @@ struct PropertiesView: View {
 
 struct PropertiesView_Previews: PreviewProvider {
     static var previews: some View {
-        PropertiesView(userShape: currentShapes[0])
+        PropertiesView(userShape: ModelData().currentShapes[0])
     }
 }
