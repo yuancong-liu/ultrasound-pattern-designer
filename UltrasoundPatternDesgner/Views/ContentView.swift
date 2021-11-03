@@ -9,22 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var modelData: ModelData
     @State var showPatterns = false
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Button(action: createCircle) {
+                Button(action: {
+                    modelData.currentShapes.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "circle"))
+                }) {
                     Image(systemName: "circle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
-                Button(action: createRectangle) {
+                Button(action: {
+                    modelData.currentShapes.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "rectangle"))
+                }) {
                     Image(systemName: "square")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
-                Button(action: createTriangle) {
+                Button(action: {
+                    modelData.currentShapes.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "triangle"))
+                }) {
                     Image(systemName: "triangle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
@@ -72,7 +79,7 @@ struct ContentView: View {
                     ObjectsView()
                         .frame(height: 200)
                     Divider()
-                    PropertiesView(userShape: currentShapes[0])
+                    PropertiesView(userShape: ModelData().currentShapes[0])
                     
                 }
                 .padding(.horizontal, 5)
@@ -86,9 +93,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
-                
-            ContentView()
+            ContentView().environmentObject(ModelData())
         }
     }
 }

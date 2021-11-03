@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Combine
 
-var currentShapes = loadShapes()
+final class ModelData: ObservableObject {
+    @Published var currentShapes = loadShapes()
+}
+
 
 func loadShapes() -> Array<UserShape> {
     
@@ -18,16 +22,4 @@ func loadShapes() -> Array<UserShape> {
     shapesArray.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "rectangle"))
     
     return shapesArray
-}
-
-func createCircle() {
-    currentShapes.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "circle"))
-}
-
-func createTriangle() {
-    currentShapes.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "triangle"))
-}
-
-func createRectangle() {
-    currentShapes.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "rectangle"))
 }
