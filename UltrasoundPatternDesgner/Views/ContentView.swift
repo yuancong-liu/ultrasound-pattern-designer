@@ -37,13 +37,6 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }
                 
-//                Button(action: addOne) {
-//                    Text("Button")
-//                }
-                
-//                Text(variable.description)
-                
-                
                 Spacer()
                 
                 Toggle(isOn: $showPatterns) {
