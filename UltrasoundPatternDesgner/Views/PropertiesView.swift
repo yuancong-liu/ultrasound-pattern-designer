@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PropertiesView: View {
     
+    @EnvironmentObject var modelData: ModelData
     @State var userShape: UserShape
     
     var body: some View {
@@ -27,26 +28,46 @@ struct PropertiesView: View {
                     TextField("\(userShape.name)", text: $userShape.name)
                 }
                 
-                Stepper(value: $userShape.width, in: 1...100) {
+                Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].width, in: 1...2000) {
                     Text("Width:")
-                    Text(userShape.width.description)
+                    Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        $0.id == self.userShape.id
+                    } ) ?? -1].width.description)
                 }
                 
-                Stepper(value: $userShape.height, in: 1...100) {
+                Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].height, in: 1...2000) {
                     Text("Height:")
-                    Text(userShape.height.description)
+                    Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        $0.id == self.userShape.id
+                    } ) ?? -1].height.description)
                 }
-                Stepper(value: $userShape.rotation, in: 1...100) {
+                Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].rotation, in: -360...360) {
                     Text("Rotation:")
-                    Text(userShape.rotation.description)
+                    Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        $0.id == self.userShape.id
+                    } ) ?? -1].rotation.description)
                 }
-                Stepper(value: $userShape.centroid.x, in: 1...100) {
+                Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].centroid.x, in: 1...2000) {
                     Text("x:")
-                    Text(userShape.centroid.x.description)
+                    Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        $0.id == self.userShape.id
+                    } ) ?? -1].centroid.x.description)
                 }
-                Stepper(value: $userShape.centroid.y, in: 1...100) {
+                Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].centroid.y, in: 1...2000) {
                     Text("y:")
-                    Text(userShape.centroid.y.description)
+                    Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        $0.id == self.userShape.id
+                    } ) ?? -1].centroid.y.description)
                 }
             }
         }

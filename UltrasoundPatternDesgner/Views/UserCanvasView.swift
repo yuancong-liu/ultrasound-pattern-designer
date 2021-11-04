@@ -17,13 +17,13 @@ struct UserCanvas: View {
                 if shape.isShown {
                     switch shape.shapeCategory {
                         case "circle":
-                            drawCircle(shape).stroke(lineWidth: 3)
+                            drawCircle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
                         case "triangle":
-                            drawTriangle(shape).stroke(lineWidth: 3)
+                            drawTriangle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
                         case "rectangle":
-                            drawRectangle(shape).stroke(lineWidth: 3)
+                            drawRectangle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
                         default:
-                            drawCircle(shape).stroke(lineWidth: 3)
+                            drawCircle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
                     }
                 }
             }
