@@ -14,15 +14,17 @@ struct UserCanvas: View {
     var body: some View {
         GeometryReader { geometry in
             ForEach(modelData.currentShapes) { shape in
-                switch shape.shapeCategory {
-                    case "circle":
-                        drawCircle(shape).stroke(lineWidth: 3)
-                    case "triangle":
-                        drawTriangle(shape).stroke(lineWidth: 3)
-                    case "rectangle":
-                        drawRectangle(shape).stroke(lineWidth: 3)
-                    default:
-                        drawCircle(shape).stroke(lineWidth: 3)
+                if shape.isShown {
+                    switch shape.shapeCategory {
+                        case "circle":
+                            drawCircle(shape).stroke(lineWidth: 3)
+                        case "triangle":
+                            drawTriangle(shape).stroke(lineWidth: 3)
+                        case "rectangle":
+                            drawRectangle(shape).stroke(lineWidth: 3)
+                        default:
+                            drawCircle(shape).stroke(lineWidth: 3)
+                    }
                 }
             }
         }
