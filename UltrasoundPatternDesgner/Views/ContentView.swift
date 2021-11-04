@@ -10,39 +10,31 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var modelData: ModelData
-    @State var showPatterns = false
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Button(action: {
-                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 20...1000), y: Int.random(in: 20...500)), CGPoint(x: Int.random(in: 20...1000), y: Int.random(in: 20...500)), "circle"))
+                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "circle"))
                 }) {
                     Image(systemName: "circle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
                 Button(action: {
-                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 20...1000), y: Int.random(in: 20...500)), CGPoint(x: Int.random(in: 20...1000), y: Int.random(in: 20...500)), "rectangle"))
+                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "rectangle"))
                 }) {
                     Image(systemName: "square")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
                 Button(action: {
-                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 20...1000), y: Int.random(in: 20...500)), CGPoint(x: Int.random(in: 20...1000), y: Int.random(in: 20...500)), "triangle"))
+                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "triangle"))
                 }) {
                     Image(systemName: "triangle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
-                
-                Spacer()
-                
-                Toggle(isOn: $showPatterns) {
-                    Text("Alignments")
-                        .bold()
-                }.toggleStyle(.switch)
             }
             .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
             Divider()
@@ -62,6 +54,7 @@ struct ContentView: View {
                     Spacer()
                     
                     UserCanvas()
+                        .frame(width: 1000, height: 500)
                 }
                 
                 
