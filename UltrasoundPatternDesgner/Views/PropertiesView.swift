@@ -25,7 +25,11 @@ struct PropertiesView: View {
             List {
                 HStack {
                     Text("Name:")
-                    TextField("\(userShape.name)", text: $userShape.name)
+                    TextField((modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].name), text: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].name)
                 }
                 
                 Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
