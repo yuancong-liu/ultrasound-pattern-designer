@@ -26,21 +26,27 @@ struct PropertiesView: View {
                     Text("Name:")
                     TextField("\(userShape.name)", text: $userShape.name)
                 }
-                HStack {
-                    Text("Wdith:")
+                
+                Stepper(value: $userShape.width, in: 1...100) {
+                    Text("Width:")
                     Text(userShape.width.description)
                 }
-                HStack {
+                
+                Stepper(value: $userShape.height, in: 1...100) {
                     Text("Height:")
                     Text(userShape.height.description)
                 }
-                HStack {
+                Stepper(value: $userShape.rotation, in: 1...100) {
                     Text("Rotation:")
                     Text(userShape.rotation.description)
                 }
-                HStack {
-                    Text("ID:")
-                    Text(userShape.id.description)
+                Stepper(value: $userShape.centroid.x, in: 1...100) {
+                    Text("x:")
+                    Text(userShape.centroid.x.description)
+                }
+                Stepper(value: $userShape.centroid.y, in: 1...100) {
+                    Text("y:")
+                    Text(userShape.centroid.y.description)
                 }
             }
         }
