@@ -34,6 +34,10 @@ struct UserShape: Hashable, Codable, Identifiable {
 
     var rotation: Double
     
+    mutating func setShown() {
+        self.isShown = !self.isShown
+    }
+    
     
     init(_ startingPoint: CGPoint, _ endingPoint: CGPoint, _ shapeCategory: String) {
         self.width = abs(startingPoint.x - endingPoint.x)

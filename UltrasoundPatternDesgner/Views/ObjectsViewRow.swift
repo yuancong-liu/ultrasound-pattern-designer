@@ -42,7 +42,7 @@ struct ObjectsViewRow: View {
             .buttonStyle(.borderless)
 
             Button(action: {
-                self.userShape.isShown.toggle()
+                self.userShape.setShown()
             }) {
                 if self.userShape.isShown {
                     Image(systemName: "eye.fill")
