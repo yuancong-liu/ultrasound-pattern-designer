@@ -42,6 +42,9 @@ struct ObjectsViewRow: View {
             .buttonStyle(.borderless)
 
             Button(action: {
+                modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? -1].setShown()
                 self.userShape.setShown()
             }) {
                 if self.userShape.isShown {
