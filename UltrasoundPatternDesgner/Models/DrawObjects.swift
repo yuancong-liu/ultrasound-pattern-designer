@@ -50,3 +50,31 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.shapeCategory = shapeCategory
     }
 }
+
+
+func drawRectangle(_ userShape: UserShape) -> Path {
+    let paths = Path { path in
+        path.addRect(CGRect(x: userShape.centroid.x - userShape.width / 2, y: userShape.centroid.y - userShape.height / 2, width: userShape.width, height: userShape.height))
+    }
+    
+    return paths
+}
+
+func drawTriangle(_ userShape: UserShape) -> Path {
+    let paths = Path { path in
+        path.move(to: CGPoint(x: userShape.centroid.x, y: userShape.centroid.y - userShape.height / 2))
+        path.addLine(to: CGPoint(x: userShape.centroid.x + userShape.width / 2, y: userShape.centroid.y + userShape.height / 2))
+        path.addLine(to: CGPoint(x: userShape.centroid.x - userShape.width / 2, y: userShape.centroid.y + userShape.height / 2))
+        path.addLine(to: CGPoint(x: userShape.centroid.x, y: userShape.centroid.y - userShape.height / 2))
+    }
+    
+    return paths
+}
+
+func drawCircle(_ userShape: UserShape) -> Path {
+    let paths = Path { path in
+        path.addEllipse(in: CGRect(x: userShape.centroid.x - userShape.width / 2, y: userShape.centroid.y - userShape.height / 2, width: userShape.width, height: userShape.height))
+    }
+    
+    return paths
+}

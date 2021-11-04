@@ -68,6 +68,7 @@ struct ContentView: View {
                 Spacer()
                 Divider()
                 ObjectsView()
+                    .frame(height: 200)
             }
         }
         
