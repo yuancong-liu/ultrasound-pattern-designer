@@ -18,11 +18,11 @@ struct ObjectsViewRow: View {
                 case "circle":
                     Image(systemName: "circle.fill")
                         .imageScale(.medium)
-                case "triangle":
-                    Image(systemName: "triangle.fill")
-                        .imageScale(.medium)
                 case "rectangle":
                     Image(systemName: "square.fill")
+                        .imageScale(.medium)
+                case "line":
+                    Image(systemName: "scribble")
                         .imageScale(.medium)
                 default:
                     Image(systemName: "star.fill")

@@ -29,9 +29,9 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }
                 Button(action: {
-                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "triangle"))
+                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "line"))
                 }) {
-                    Image(systemName: "triangle")
+                    Image(systemName: "scribble")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }

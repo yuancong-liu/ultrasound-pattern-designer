@@ -18,8 +18,8 @@ struct UserCanvas: View {
                     switch shape.shapeCategory {
                         case "circle":
                             drawCircle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
-                        case "triangle":
-                            drawTriangle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                        case "line":
+                            drawLine(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
                         case "rectangle":
                             drawRectangle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
                         default:
