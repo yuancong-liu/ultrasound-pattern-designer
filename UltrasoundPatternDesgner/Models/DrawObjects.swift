@@ -26,9 +26,9 @@ struct UserShape: Hashable, Codable, Identifiable {
         var x: Double
         var y: Double
         
-        init(_ startingPoint: CGPoint, _ endingPoint: CGPoint) {
-            x = min(startingPoint.x, endingPoint.x)
-            y = min(startingPoint.y, endingPoint.y)
+        init(_ userX: Double, _ userY: Double) {
+            x = userX
+            y = userY
         }
     }
 
@@ -43,7 +43,7 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.width = abs(startingPoint.x - endingPoint.x)
         self.height = abs(startingPoint.y - endingPoint.y)
 
-        self.position = Coordinates(startingPoint, endingPoint)
+        self.position = Coordinates(min(startingPoint.x, endingPoint.x), min(startingPoint.y, endingPoint.y))
         
         self.rotation = 0.0
         
