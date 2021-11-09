@@ -15,15 +15,31 @@ struct UserCanvas: View {
         GeometryReader { geometry in
             ForEach(modelData.currentShapes) { shape in
                 if shape.isShown {
-                    switch shape.shapeCategory {
-                        case "circle":
-                            drawCircle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
-                        case "line":
-                            drawLine(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
-                        case "rectangle":
-                            drawRectangle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
-                        default:
-                            drawCircle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                    if checkOutside(shape) {
+                        switch shape.shapeCategory {
+                            case "circle":
+                                drawCircle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                            case "line":
+                                drawLine(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                            case "rectangle":
+                                drawRectangle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                            default:
+                                drawCircle(shape).stroke(lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                        }
+                    } else {
+                        Text("\(shape.name) is out of range!")
+                            .foregroundColor(Color.pink)
+                            .padding()
+                        switch shape.shapeCategory {
+                            case "circle":
+                                drawCircle(shape).stroke(Color.pink, lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                            case "line":
+                                drawLine(shape).stroke(Color.pink, lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                            case "rectangle":
+                                drawRectangle(shape).stroke(Color.pink, lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                            default:
+                                drawCircle(shape).stroke(Color.pink, lineWidth: 3).rotationEffect(.degrees(shape.rotation))
+                        }
                     }
                 }
             }

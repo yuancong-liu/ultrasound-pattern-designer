@@ -59,19 +59,19 @@ struct PropertiesView: View {
                 }
                 Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                     $0.id == self.userShape.id
-                } ) ?? 0].centroid.x, in: 1...1000) {
+                } ) ?? 0].position.x, in: 1...1000) {
                     Text("x:")
                     Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                         $0.id == self.userShape.id
-                    } ) ?? 0].centroid.x.description)
+                    } ) ?? 0].position.x.description)
                 }
                 Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                     $0.id == self.userShape.id
-                } ) ?? 0].centroid.y, in: 1...500) {
+                } ) ?? 0].position.y, in: 1...500) {
                     Text("y:")
                     Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                         $0.id == self.userShape.id
-                    } ) ?? 0].centroid.y.description)
+                    } ) ?? 0].position.y.description)
                 }
             }
         }

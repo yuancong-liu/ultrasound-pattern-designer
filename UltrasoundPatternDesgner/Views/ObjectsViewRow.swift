@@ -29,7 +29,9 @@ struct ObjectsViewRow: View {
                         .imageScale(.medium)
             }
             
-            Text(userShape.name)
+            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                $0.id == self.userShape.id
+            } ) ?? 0].name)
             Spacer()
             Button(action: {
                 modelData.currentShapes.removeAll(where: {
@@ -44,7 +46,7 @@ struct ObjectsViewRow: View {
             Button(action: {
                 modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                     $0.id == self.userShape.id
-                } ) ?? -1].setShown()
+                } ) ?? 0].setShown()
                 self.userShape.setShown()
             }) {
                 if self.userShape.isShown {

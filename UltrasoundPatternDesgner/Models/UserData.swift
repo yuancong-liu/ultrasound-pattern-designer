@@ -12,14 +12,18 @@ final class ModelData: ObservableObject {
     @Published var currentShapes = [UserShape]()
 }
 
+func checkOutside(_ userShape: UserShape) -> Bool {
+    if userShape.position.x < 0 {
+        return false
+    } else if userShape.position.y < 0 {
+        return false
+    } else if userShape.position.x + userShape.width > 400 {
+        return false
+    } else if userShape.position.y + userShape.height > 400 {
+        return false
+    }
+    
+    return true
+}
 
-//func loadShapes() -> Array<UserShape> {
-//
-//    var shapesArray = [UserShape]()
-//
-//    shapesArray.append(UserShape(CGPoint(x: 30, y: 60), CGPoint(x: 40, y: 100), "circle"))
-//    shapesArray.append(UserShape(CGPoint(x: 300, y: 400), CGPoint(x: 100, y: 200), "triangle"))
-//    shapesArray.append(UserShape(CGPoint(x: 450, y: 80), CGPoint(x: 3800, y: 220), "rectangle"))
-//
-//    return shapesArray
-//}
+

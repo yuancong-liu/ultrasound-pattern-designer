@@ -12,6 +12,9 @@ struct UltrasoundPatternDesgnerApp: App {
     
     @State private var modelData = ModelData()
     
+    @State var canvasWidth: Int = 1000
+    @State var canvasHeight: Int = 500
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

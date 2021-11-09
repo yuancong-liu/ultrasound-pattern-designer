@@ -20,15 +20,15 @@ struct UserShape: Hashable, Codable, Identifiable {
     var width: Double
     var height: Double
     
-    var centroid: Coordinates
+    var position: Coordinates
     
     struct Coordinates: Hashable, Codable {
         var x: Double
         var y: Double
         
         init(_ startingPoint: CGPoint, _ endingPoint: CGPoint) {
-            x = (startingPoint.x + endingPoint.x) / 2
-            y = (startingPoint.y + endingPoint.y) / 2
+            x = min(startingPoint.x, endingPoint.x)
+            y = min(startingPoint.y, endingPoint.y)
         }
     }
 
@@ -43,7 +43,7 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.width = abs(startingPoint.x - endingPoint.x)
         self.height = abs(startingPoint.y - endingPoint.y)
 
-        self.centroid = Coordinates(startingPoint, endingPoint)
+        self.position = Coordinates(startingPoint, endingPoint)
         
         self.rotation = 0.0
         
@@ -58,7 +58,7 @@ struct UserShape: Hashable, Codable, Identifiable {
 
 func drawRectangle(_ userShape: UserShape) -> Path {
     let paths = Path { path in
-        path.addRect(CGRect(x: userShape.centroid.x - userShape.width / 2, y: userShape.centroid.y - userShape.height / 2, width: userShape.width, height: userShape.height))
+        path.addRect(CGRect(x: userShape.position.x, y: userShape.position.y, width: userShape.width, height: userShape.height))
     }
     
     return paths
@@ -66,8 +66,8 @@ func drawRectangle(_ userShape: UserShape) -> Path {
 
 func drawLine(_ userShape: UserShape) -> Path {
     let paths = Path { path in
-        path.move(to: CGPoint(x: userShape.centroid.x - userShape.width / 2, y: userShape.centroid.y - userShape.height / 2))
-        path.addLine(to: CGPoint(x: userShape.centroid.x + userShape.width / 2, y: userShape.centroid.y + userShape.height / 2))
+        path.move(to: CGPoint(x: userShape.position.x, y: userShape.position.y))
+        path.addLine(to: CGPoint(x: userShape.position.x + userShape.width, y: userShape.position.y + userShape.height))
     }
     
     return paths
@@ -75,7 +75,7 @@ func drawLine(_ userShape: UserShape) -> Path {
 
 func drawCircle(_ userShape: UserShape) -> Path {
     let paths = Path { path in
-        path.addEllipse(in: CGRect(x: userShape.centroid.x - userShape.width / 2, y: userShape.centroid.y - userShape.height / 2, width: userShape.width, height: userShape.height))
+        path.addEllipse(in: CGRect(x: userShape.position.x, y: userShape.position.y, width: userShape.width, height: userShape.height))
     }
     
     return paths

@@ -15,23 +15,28 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             HStack {
                 Button(action: {
-                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "circle"))
+                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), "circle"))
                 }) {
                     Image(systemName: "circle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
                 Button(action: {
-                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "rectangle"))
+                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), "rectangle"))
                 }) {
                     Image(systemName: "square")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
                 Button(action: {
-                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), CGPoint(x: Int.random(in: 0...1000), y: Int.random(in: 0...500)), "line"))
+                    modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), "line"))
                 }) {
                     Image(systemName: "scribble")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
+                }
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Image(systemName: "rectangle.on.rectangle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }

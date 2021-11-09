@@ -14,7 +14,7 @@ struct ObjectsView: View {
     var body: some View {
         VStack (alignment: .leading) {
             HStack {
-                Image(systemName: "puzzlepiece.extension.fill")
+                Image(systemName: "cube.fill")
                     .imageScale(.large)
                 Text("Objects")
                     .bold()
