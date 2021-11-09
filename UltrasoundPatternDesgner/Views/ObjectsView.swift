@@ -32,6 +32,7 @@ struct ObjectsView: View {
             }
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
+        .frame(minWidth: 300)
     }
 }
 

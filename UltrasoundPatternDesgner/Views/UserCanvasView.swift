@@ -30,6 +30,7 @@ struct UserCanvas: View {
                         Text("\(shape.name) is out of range!")
                             .foregroundColor(Color.pink)
                             .padding()
+                            .background(Color.white)
                         switch shape.shapeCategory {
                             case "circle":
                                 drawCircle(shape).stroke(Color.pink, lineWidth: 3).rotationEffect(.degrees(shape.rotation))

@@ -19,7 +19,7 @@ struct UltrasoundPatternDesgnerApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(modelData)
-                .frame(minWidth: 1000, idealWidth: 1000, maxWidth: 1400, minHeight: 800, idealHeight: 800, maxHeight: 1000)
+//                .frame(minWidth: 1000, idealWidth: 1000, maxWidth: 1400, minHeight: 400, idealHeight: 500, maxHeight: 600)
         }
     }
 }
