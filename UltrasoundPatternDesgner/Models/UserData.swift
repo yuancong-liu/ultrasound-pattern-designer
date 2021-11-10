@@ -13,6 +13,12 @@ final class ModelData: ObservableObject {
 }
 
 func checkOutside(_ userShape: UserShape) -> Bool {
+    if userShape.shapeCategory == "circle" {
+        if userShape.position.y + userShape.width > 400 {
+            return false
+        }
+    }
+    
     if userShape.position.x < 0 {
         return false
     } else if userShape.position.y < 0 {

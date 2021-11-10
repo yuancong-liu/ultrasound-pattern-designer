@@ -57,7 +57,7 @@ struct ContentView: View {
                     .padding(.leading, 10)
                     
                     UserCanvas()
-                        .border(Color.pink)
+                        .background(Color.white)
                         .frame(width: 400, height: 400)
                 }
                 

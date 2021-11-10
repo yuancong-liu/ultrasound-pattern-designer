@@ -21,6 +21,8 @@ struct UserShape: Hashable, Codable, Identifiable {
     var height: Double
     
     var position: Coordinates
+    var startingPoint: Coordinates
+    var endingPoint: Coordinates
     
     struct Coordinates: Hashable, Codable {
         var x: Double
@@ -42,8 +44,11 @@ struct UserShape: Hashable, Codable, Identifiable {
     init(_ startingPoint: CGPoint, _ endingPoint: CGPoint, _ shapeCategory: String) {
         self.width = abs(startingPoint.x - endingPoint.x)
         self.height = abs(startingPoint.y - endingPoint.y)
+        
+        self.startingPoint = Coordinates(startingPoint.x, startingPoint.y)
+        self.endingPoint = Coordinates(endingPoint.x, endingPoint.y)
 
-        self.position = Coordinates(min(startingPoint.x, endingPoint.x), min(startingPoint.y, endingPoint.y))
+        self.position = Coordinates(min(self.startingPoint.x, self.endingPoint.x), min(self.startingPoint.y, self.endingPoint.y))
         
         self.rotation = 0.0
         
@@ -66,8 +71,8 @@ func drawRectangle(_ userShape: UserShape) -> Path {
 
 func drawLine(_ userShape: UserShape) -> Path {
     let paths = Path { path in
-        path.move(to: CGPoint(x: userShape.position.x, y: userShape.position.y))
-        path.addLine(to: CGPoint(x: userShape.position.x + userShape.width, y: userShape.position.y + userShape.height))
+        path.move(to: CGPoint(x: userShape.startingPoint.x, y: userShape.startingPoint.y))
+        path.addLine(to: CGPoint(x: userShape.endingPoint.x, y: userShape.endingPoint.y))
     }
     
     return paths
@@ -75,7 +80,7 @@ func drawLine(_ userShape: UserShape) -> Path {
 
 func drawCircle(_ userShape: UserShape) -> Path {
     let paths = Path { path in
-        path.addEllipse(in: CGRect(x: userShape.position.x, y: userShape.position.y, width: userShape.width, height: userShape.height))
+        path.addEllipse(in: CGRect(x: userShape.position.x, y: userShape.position.y, width: userShape.width, height: userShape.width))
     }
     
     return paths
