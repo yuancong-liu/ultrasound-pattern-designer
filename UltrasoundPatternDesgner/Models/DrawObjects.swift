@@ -36,6 +36,7 @@ struct UserShape: Hashable, Codable, Identifiable {
 
     var rotation: Double
     var direction: Bool
+    var renderFreq: Int
     
     mutating func setShown() {
         self.isShown = !self.isShown
@@ -53,6 +54,7 @@ struct UserShape: Hashable, Codable, Identifiable {
         
         self.rotation = 0.0
         self.direction = true
+        self.renderFreq = 17
         
         self.id = idUsed + 1
         idUsed += 1
