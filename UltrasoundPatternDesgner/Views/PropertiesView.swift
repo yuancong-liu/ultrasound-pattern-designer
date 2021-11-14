@@ -34,16 +34,17 @@ struct PropertiesView: View {
                         } ) ?? 0].name)
                         }
                         
+                        Text("Size").bold()
+                        
                         
                         HStack {
                             Text("Width:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
                             } ) ?? 0].width, formatter: NumberFormatter())
-                        }
-                        
-                        
-                        HStack {
+                            
+                            Spacer()
+                            
                             Text("Height:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
@@ -56,9 +57,9 @@ struct PropertiesView: View {
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
                             } ) ?? 0].position.x, formatter: NumberFormatter())
-                        }
-                        
-                        HStack {
+                            
+                            Spacer()
+                            
                             Text("y:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
@@ -88,6 +89,8 @@ struct PropertiesView: View {
                             } ) ?? 0].name)
                         }
                         
+                        Text("Size").bold()
+                        
                         HStack {
                             Text("Radius:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
@@ -101,9 +104,9 @@ struct PropertiesView: View {
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
                             } ) ?? 0].position.x, formatter: NumberFormatter())
-                        }
-                        
-                        HStack {
+                            
+                            Spacer()
+                            
                             Text("y:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
@@ -132,6 +135,8 @@ struct PropertiesView: View {
                             } ) ?? 0].name)
                         }
                         
+                        Text("Position").bold()
+                        
                         Text("Point 1")
                         
                         HStack {
@@ -139,9 +144,9 @@ struct PropertiesView: View {
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
                             } ) ?? 0].startingPoint.x, formatter: NumberFormatter())
-                        }
                         
-                        HStack {
+                            Spacer()
+                            
                             Text("y:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
@@ -151,14 +156,14 @@ struct PropertiesView: View {
                         Text("Point 2")
                         
                         HStack {
-                            Text("Width:")
+                            Text("x:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
                             } ) ?? 0].endingPoint.x, formatter: NumberFormatter())
-                        }
                         
-                        HStack {
-                            Text("Width:")
+                            Spacer()
+                            
+                            Text("y:")
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
                             } ) ?? 0].endingPoint.y, formatter: NumberFormatter())
