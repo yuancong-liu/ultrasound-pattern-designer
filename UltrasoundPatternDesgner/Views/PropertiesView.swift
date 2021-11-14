@@ -53,14 +53,6 @@ struct PropertiesView: View {
                         }
                         Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                             $0.id == self.userShape.id
-                        } ) ?? 0].rotation, in: -360...360) {
-                            Text("Rotation:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                                $0.id == self.userShape.id
-                            } ) ?? 0].rotation.description)
-                        }
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
                         } ) ?? 0].position.x, in: 1...1000) {
                             Text("x:")
                             Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
@@ -96,14 +88,6 @@ struct PropertiesView: View {
                             } ) ?? 0].width.description)
                         } 
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].rotation, in: -360...360) {
-                            Text("Rotation:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                                $0.id == self.userShape.id
-                            } ) ?? 0].rotation.description)
-                        }
                         Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                             $0.id == self.userShape.id
                         } ) ?? 0].position.x, in: 1...1000) {
