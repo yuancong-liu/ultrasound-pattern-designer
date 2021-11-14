@@ -35,6 +35,7 @@ struct UserShape: Hashable, Codable, Identifiable {
     }
 
     var rotation: Double
+    var direction: Bool
     
     mutating func setShown() {
         self.isShown = !self.isShown
@@ -51,6 +52,7 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.position = Coordinates(min(self.startingPoint.x, self.endingPoint.x), min(self.startingPoint.y, self.endingPoint.y))
         
         self.rotation = 0.0
+        self.direction = true
         
         self.id = idUsed + 1
         idUsed += 1
