@@ -66,8 +66,8 @@ struct PropertiesView: View {
                             } ) ?? 0].position.y, formatter: NumberFormatter())
                         }
                         
-                        Text("Direction:").bold()
-                        Picker("", selection: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        Text("Render").bold()
+                        Picker("Direction:", selection: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                             $0.id == self.userShape.id
                         } ) ?? 0].direction) {
                             Image(systemName: "arrow.clockwise").tag(true)
@@ -75,6 +75,12 @@ struct PropertiesView: View {
                         }
                         .pickerStyle(.segmented)
                         
+                        HStack {
+                            Text("Frequency:")
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                $0.id == self.userShape.id
+                            } ) ?? 0].renderFreq, formatter: NumberFormatter())
+                        }
                         
                     }
                     
@@ -113,14 +119,21 @@ struct PropertiesView: View {
                             } ) ?? 0].position.y, formatter: NumberFormatter())
                         }
                         
-                        Text("Direction:").bold()
-                        Picker("", selection: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        Text("Render").bold()
+                        Picker("Direction:", selection: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                             $0.id == self.userShape.id
                         } ) ?? 0].direction) {
                             Image(systemName: "arrow.clockwise").tag(true)
                             Image(systemName: "arrow.counterclockwise").tag(false)
                         }
                         .pickerStyle(.segmented)
+                        
+                        HStack {
+                            Text("Frequency:")
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                $0.id == self.userShape.id
+                            } ) ?? 0].renderFreq, formatter: NumberFormatter())
+                        }
                         
                     }
                     
@@ -167,6 +180,15 @@ struct PropertiesView: View {
                             TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
                             } ) ?? 0].endingPoint.y, formatter: NumberFormatter())
+                        }
+                        
+                        Text("Render").bold()
+                        
+                        HStack {
+                            Text("Frequency:")
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                $0.id == self.userShape.id
+                            } ) ?? 0].renderFreq, formatter: NumberFormatter())
                         }
                     }
                     
