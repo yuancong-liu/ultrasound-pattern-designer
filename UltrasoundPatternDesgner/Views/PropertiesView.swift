@@ -34,40 +34,38 @@ struct PropertiesView: View {
                         } ) ?? 0].name)
                         }
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].width, in: 1...1000) {
+                        
+                        HStack {
                             Text("Width:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].width.description)
+                            } ) ?? 0].width, formatter: NumberFormatter())
                         }
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].height, in: 1...500) {
+                        
+                        HStack {
                             Text("Height:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].height.description)
+                            } ) ?? 0].height, formatter: NumberFormatter())
                         }
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].position.x, in: 1...1000) {
+                        
+                        Text("Position").bold()
+                        HStack {
                             Text("x:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].position.x.description)
+                            } ) ?? 0].position.x, formatter: NumberFormatter())
                         }
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].position.y, in: 1...500) {
+                        
+                        HStack {
                             Text("y:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].position.y.description)
+                            } ) ?? 0].position.y, formatter: NumberFormatter())
                         }
                     }
+                    
                 case "circle":
                     List {
                         HStack {
@@ -79,32 +77,29 @@ struct PropertiesView: View {
                             } ) ?? 0].name)
                         }
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].width, in: 1...1000) {
+                        HStack {
                             Text("Radius:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].width.description)
-                        } 
-                        
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].position.x, in: 1...1000) {
-                            Text("x:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                                $0.id == self.userShape.id
-                            } ) ?? 0].position.x.description)
+                            } ) ?? 0].width, formatter: NumberFormatter())
                         }
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].position.y, in: 1...500) {
-                            Text("y:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        
+                        Text("Position").bold()
+                        HStack {
+                            Text("x:")
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].position.y.description)
+                            } ) ?? 0].position.x, formatter: NumberFormatter())
+                        }
+                        
+                        HStack {
+                            Text("y:")
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                $0.id == self.userShape.id
+                            } ) ?? 0].position.y, formatter: NumberFormatter())
                         }
                     }
+                    
                 case "line":
                     List {
                         HStack {
@@ -118,44 +113,37 @@ struct PropertiesView: View {
                         
                         Text("Point 1")
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].startingPoint.x, in: 0...400) {
+                        HStack {
                             Text("x:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].startingPoint.x.description)
+                            } ) ?? 0].startingPoint.x, formatter: NumberFormatter())
                         }
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].startingPoint.y, in: 0...400) {
+                        HStack {
                             Text("y:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].startingPoint.y.description)
+                            } ) ?? 0].startingPoint.y, formatter: NumberFormatter())
                         }
                         
                         Text("Point 2")
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].endingPoint.x, in: 0...400) {
-                            Text("x:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        HStack {
+                            Text("Width:")
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].endingPoint.x.description)
+                            } ) ?? 0].endingPoint.x, formatter: NumberFormatter())
                         }
                         
-                        Stepper(value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
-                            $0.id == self.userShape.id
-                        } ) ?? 0].endingPoint.y, in: 0...400) {
-                            Text("y:")
-                            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                        HStack {
+                            Text("Width:")
+                            TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                 $0.id == self.userShape.id
-                            } ) ?? 0].endingPoint.y.description)
+                            } ) ?? 0].endingPoint.y, formatter: NumberFormatter())
                         }
                     }
+                    
                 default:
                     Text("Default")
             }
