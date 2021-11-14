@@ -64,6 +64,17 @@ struct PropertiesView: View {
                                 $0.id == self.userShape.id
                             } ) ?? 0].position.y, formatter: NumberFormatter())
                         }
+                        
+                        Text("Direction:").bold()
+                        Picker("", selection: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            $0.id == self.userShape.id
+                        } ) ?? 0].direction) {
+                            Image(systemName: "arrow.clockwise").tag(true)
+                            Image(systemName: "arrow.counterclockwise").tag(false)
+                        }
+                        .pickerStyle(.segmented)
+                        
+                        
                     }
                     
                 case "circle":
@@ -98,6 +109,16 @@ struct PropertiesView: View {
                                 $0.id == self.userShape.id
                             } ) ?? 0].position.y, formatter: NumberFormatter())
                         }
+                        
+                        Text("Direction:").bold()
+                        Picker("", selection: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                            $0.id == self.userShape.id
+                        } ) ?? 0].direction) {
+                            Image(systemName: "arrow.clockwise").tag(true)
+                            Image(systemName: "arrow.counterclockwise").tag(false)
+                        }
+                        .pickerStyle(.segmented)
+                        
                     }
                     
                 case "line":
