@@ -114,6 +114,7 @@
 				22036DFB2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift */,
 				22CF01B12731920500E890CC /* Views */,
 				22CF01B22731921E00E890CC /* Models */,
+				221720132742380B00A12B12 /* CppFiles */,
 				22036DFF2728835700FD6743 /* Assets.xcassets */,
 				22036E042728835700FD6743 /* UltrasoundPatternDesgner.entitlements */,
 				22036E012728835700FD6743 /* Preview Content */,
@@ -146,6 +147,16 @@
 			path = UltrasoundPatternDesgnerUITests;
 			sourceTree = "<group>";
 		};
+		221720132742380B00A12B12 /* CppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				221720102741717700A12B12 /* ShapeGenerationInterface.cpp */,
+				221720112741717700A12B12 /* ShapeGenerationInterface.hpp */,
+				2217200F2741717700A12B12 /* UltrasoundPatternDesgner-Bridging-Header.h */,
+			);
+			path = CppFiles;
+			sourceTree = "<group>";
+		};
 		22CF01B12731920500E890CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,9 +174,6 @@
 			children = (
 				22B91FCC272E7184009B4253 /* DrawObjects.swift */,
 				22CF01AF27316F2000E890CC /* UserData.swift */,
-				221720102741717700A12B12 /* ShapeGenerationInterface.cpp */,
-				221720112741717700A12B12 /* ShapeGenerationInterface.hpp */,
-				2217200F2741717700A12B12 /* UltrasoundPatternDesgner-Bridging-Header.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
