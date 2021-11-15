@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+
 final class ModelData: ObservableObject {
     @Published var currentShapes = [UserShape]()
 }
@@ -31,5 +32,3 @@ func checkOutside(_ userShape: UserShape) -> Bool {
     
     return true
 }
-
-

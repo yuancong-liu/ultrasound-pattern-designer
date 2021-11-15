@@ -152,7 +152,6 @@
 			children = (
 				221720102741717700A12B12 /* ShapeGenerationInterface.cpp */,
 				221720112741717700A12B12 /* ShapeGenerationInterface.hpp */,
-				2217200F2741717700A12B12 /* UltrasoundPatternDesgner-Bridging-Header.h */,
 			);
 			path = CppFiles;
 			sourceTree = "<group>";
@@ -161,8 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				22036DFD2728835700FD6743 /* ContentView.swift */,
-				221A24762732728D00BCA708 /* ObjectsViewRow.swift */,
 				22B91FCE272E7F7C009B4253 /* ObjectsView.swift */,
+				221A24762732728D00BCA708 /* ObjectsViewRow.swift */,
 				22B91FD2272ED398009B4253 /* PropertiesView.swift */,
 				227C3F5727293975004B54AD /* UserCanvasView.swift */,
 			);
@@ -174,6 +173,7 @@
 			children = (
 				22B91FCC272E7184009B4253 /* DrawObjects.swift */,
 				22CF01AF27316F2000E890CC /* UserData.swift */,
+				2217200F2741717700A12B12 /* UltrasoundPatternDesgner-Bridging-Header.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";

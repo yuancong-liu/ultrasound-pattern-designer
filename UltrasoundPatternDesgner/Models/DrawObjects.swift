@@ -47,6 +47,23 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.width = abs(startingPoint.x - endingPoint.x)
         self.height = abs(startingPoint.y - endingPoint.y)
         
+        // check if width and height is in the range
+        if self.width > 100 {
+            self.width = 100
+        }
+        
+        if self.width < 10 {
+            self.width = 10
+        }
+        
+        
+        if self.height > 100 {
+            self.height = 100
+        }
+        if self.height < 10 {
+            self.height = 10
+        }
+        
         self.startingPoint = Coordinates(startingPoint.x, startingPoint.y)
         self.endingPoint = Coordinates(endingPoint.x, endingPoint.y)
 
