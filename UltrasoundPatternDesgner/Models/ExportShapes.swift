@@ -16,13 +16,8 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
     let fileHandle = FileHandle(forWritingAtPath: path)!
     fileHandle.seekToEndOfFile()
     
-    var noRect: Int = 0
-    var noCir: Int = 0
-    var noLine: Int = 0
     
-    for shape in userShapes {
-        
-        fileHandle.write("""
+    fileHandle.write("""
                         #include <cmath>
                         #include <iostream>
                         #include <chrono>
@@ -61,8 +56,15 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
                                 position.y = std::sin(2 * M_PI * frequency * t.count()) * radius;
                                 return position;
                             }
-                        };
+                        };\n
                         """.data(using: .ascii)!)
+    
+    var noRect: Int = 0
+    var noCir: Int = 0
+    var noLine: Int = 0
+    
+    for shape in userShapes {
+        
 
         
         
