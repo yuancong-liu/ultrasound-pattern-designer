@@ -10,7 +10,7 @@ import SwiftUI
 
 
 func exportShapes(_ userShapes: [UserShape]) -> Void {
-    let path = "test.txt"
+    let path = "test.cpp"
     FileManager.default.createFile(atPath: path, contents: nil, attributes: nil)
     
     let fileHandle = FileHandle(forWritingAtPath: path)!
@@ -21,6 +21,51 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
     var noLine: Int = 0
     
     for shape in userShapes {
+        
+        fileHandle.write("""
+                        #include <cmath>
+                        #include <iostream>
+                        #include <chrono>
+                        #include <thread>
+                        #include <string>
+                        
+                        #include "UltrahapticsTimePointStreaming.hpp"
+                        
+                        #ifndef M_PI
+                        #define M_PI 3.14159265358979323
+                        #endif
+                        
+                        using Seconds = std::chrono::duration;<float>;
+                        
+                        static auto start_time = std::chrono::steady_clock::now();
+                        
+                        // Structure for passing information on the type of point to create
+                        struct Circle
+                        {
+                            // The position of the control point
+                            Ultrahaptics::Vector3 position;
+                            
+                            // The intensity of the control point
+                            float intensity;
+                            
+                            // The radius of the circle
+                            float radius;
+                            
+                            // The frequency at which the control point goes around the circle
+                            float frequency;
+                            
+                            
+                            const Ultrahaptics::Vector3 evaluateAt(Seconds t){
+                                // Calculate the x and y positions of the circle and set the height
+                                position.x = std::cos(2 * M_PI * frequency * t.count()) * radius;
+                                position.y = std::sin(2 * M_PI * frequency * t.count()) * radius;
+                                return position;
+                            }
+                        };
+                        """.data(using: .ascii)!)
+
+        
+        
         switch shape.shapeCategory {
             case "rectangle":
                 noRect += 1
@@ -32,10 +77,6 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
                 continue
         }
     }
-    
-    fileHandle.write("There are \(noRect) rectangles.\n".data(using: .ascii)!)
-    fileHandle.write("There are \(noCir) circles.\n".data(using: .ascii)!)
-    fileHandle.write("There are \(noLine) lines.\n".data(using: .ascii)!)
     
     try? fileHandle.close()
     
