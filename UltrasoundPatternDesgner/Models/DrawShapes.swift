@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 func drawRectangle(_ userShape: UserShape) -> Path {

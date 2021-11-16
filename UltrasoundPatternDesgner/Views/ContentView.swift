@@ -35,6 +35,9 @@ struct ContentView: View {
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
+                
+                Divider()
+                
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                     Image(systemName: "rectangle.on.rectangle")
                         .imageScale(.medium)
