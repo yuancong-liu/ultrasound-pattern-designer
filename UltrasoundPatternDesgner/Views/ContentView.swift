@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var modelData: ModelData
+    @State var showExportAlert: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -38,13 +39,30 @@ struct ContentView: View {
                 
                 Divider()
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {}) {
                     Image(systemName: "rectangle.on.rectangle")
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
+                
+                Spacer()
+                
+                Button(action: {
+                    exportShapes(modelData.currentShapes)
+                    self.showExportAlert = true
+                }) {
+                    Image(systemName: "square.and.arrow.up")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
+                }
+                .alert(isPresented: $showExportAlert) {
+                    Alert(title: Text("Exported!"),
+                          message: Text("\(modelData.currentShapes.count) shapes in total!\n"),
+                          dismissButton: .default(Text("OK!")))
+                }
             }
             .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
+            
             Divider()
             
             HStack (alignment: .top) {
@@ -67,7 +85,6 @@ struct ContentView: View {
                 
                 Divider()
                 ObjectsView()
-//                    .frame(height: 200)
             }
         }
         

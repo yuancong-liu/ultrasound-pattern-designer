@@ -15,6 +15,7 @@
 		22036E182728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */; };
 		22036E1A2728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */; };
 		22172015274390DC00A12B12 /* DrawShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22172014274390DC00A12B12 /* DrawShapes.swift */; };
+		22172017274398DB00A12B12 /* ExportShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22172016274398DB00A12B12 /* ExportShapes.swift */; };
 		221A24772732728D00BCA708 /* ObjectsViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221A24762732728D00BCA708 /* ObjectsViewRow.swift */; };
 		227C3F5827293975004B54AD /* UserCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C3F5727293975004B54AD /* UserCanvasView.swift */; };
 		22B91FCD272E7184009B4253 /* UserShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91FCC272E7184009B4253 /* UserShapes.swift */; };
@@ -53,6 +54,7 @@
 		22036E172728835800FD6743 /* UltrasoundPatternDesgnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITests.swift; sourceTree = "<group>"; };
 		22036E192728835800FD6743 /* UltrasoundPatternDesgnerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrasoundPatternDesgnerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		22172014274390DC00A12B12 /* DrawShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapes.swift; sourceTree = "<group>"; };
+		22172016274398DB00A12B12 /* ExportShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportShapes.swift; sourceTree = "<group>"; };
 		221A24762732728D00BCA708 /* ObjectsViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsViewRow.swift; sourceTree = "<group>"; };
 		227C3F5727293975004B54AD /* UserCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCanvasView.swift; sourceTree = "<group>"; };
 		22B91FCC272E7184009B4253 /* UserShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShapes.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				22B91FCC272E7184009B4253 /* UserShapes.swift */,
 				22172014274390DC00A12B12 /* DrawShapes.swift */,
 				22CF01AF27316F2000E890CC /* UserData.swift */,
+				22172016274398DB00A12B12 /* ExportShapes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				22CF01B027316F2000E890CC /* UserData.swift in Sources */,
 				22172015274390DC00A12B12 /* DrawShapes.swift in Sources */,
 				227C3F5827293975004B54AD /* UserCanvasView.swift in Sources */,
+				22172017274398DB00A12B12 /* ExportShapes.swift in Sources */,
 				221A24772732728D00BCA708 /* ObjectsViewRow.swift in Sources */,
 				22B91FD3272ED398009B4253 /* PropertiesView.swift in Sources */,
 				22036DFC2728835700FD6743 /* UltrasoundPatternDesgnerApp.swift in Sources */,
