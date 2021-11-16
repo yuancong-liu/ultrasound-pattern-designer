@@ -10,6 +10,12 @@ import SwiftUI
 
 
 func exportShapes(_ userShapes: [UserShape]) -> Void {
+    let path = "test.txt"
+    FileManager.default.createFile(atPath: path, contents: nil, attributes: nil)
+    
+    let fileHandle = FileHandle(forWritingAtPath: path)!
+    fileHandle.seekToEndOfFile()
+    
     var noRect: Int = 0
     var noCir: Int = 0
     var noLine: Int = 0
@@ -26,4 +32,17 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
                 continue
         }
     }
+    
+    fileHandle.write("There are \(noRect) rectangles.\n".data(using: .ascii)!)
+    fileHandle.write("There are \(noCir) circles.\n".data(using: .ascii)!)
+    fileHandle.write("There are \(noLine) lines.\n".data(using: .ascii)!)
+    
+    try? fileHandle.close()
+    
+//    if let content = try? String(contentsOfFile: path, encoding: .utf8) {
+//        print(content)
+//    }
+
+    
+    
 }
