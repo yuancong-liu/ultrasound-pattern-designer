@@ -7,10 +7,13 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
+var problematicObjects = [Int]()
 
 final class ModelData: ObservableObject {
     @Published var currentShapes = [UserShape]()
+    @Published var problematicObjects = [Int]()
 }
 
 
@@ -32,4 +35,37 @@ func checkOutside(_ userShape: UserShape) -> Bool {
     }
     
     return true
+}
+
+
+func checkProblematic(_ modelData: ModelData) -> Void {
+    
+    modelData.problematicObjects = [Int]()
+    
+    for userShape in modelData.currentShapes {
+        
+        if !checkOutside(userShape) {
+            modelData.problematicObjects.append(userShape.id)
+        }
+        
+        switch userShape.shapeCategory {
+            case "rectangle":
+                if userShape.width < 10 || userShape.width > 100 || userShape.height < 10 || userShape.height > 100 || userShape.renderFreq <= 0 {
+                    modelData.problematicObjects.append(userShape.id)
+                }
+
+            case "circle":
+                if userShape.width < 10 || userShape.width > 100 || userShape.renderFreq <= 0 {
+                    modelData.problematicObjects.append(userShape.id)
+                }
+                
+            case "line":
+                if userShape.startingPoint == userShape.endingPoint || userShape.renderFreq <= 0 {
+                    modelData.problematicObjects.append(userShape.id)
+                }
+                
+            default:
+                break
+        }
+    }
 }

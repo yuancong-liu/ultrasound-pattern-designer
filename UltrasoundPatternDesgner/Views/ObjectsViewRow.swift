@@ -32,7 +32,12 @@ struct ObjectsViewRow: View {
             Text(modelData.currentShapes.count != 0 ? modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                 $0.id == self.userShape.id
             } ) ?? 0].name : "no")
+                .foregroundColor(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                    $0.id == self.userShape.id
+                } ) ?? 0].problematic ? .pink : .black)
+            
             Spacer()
+            
             Button(action: {
                 modelData.currentShapes.removeAll(where: {
                     $0.id == self.userShape.id

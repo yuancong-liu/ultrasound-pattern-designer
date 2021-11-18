@@ -113,6 +113,9 @@ struct PropertiesView: View {
                                 TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                     $0.id == self.userShape.id
                                 } ) ?? 0].renderFreq, formatter: NumberFormatter())
+                                    .foregroundColor(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].renderFreq > 0 ? .black : .pink)
                             }
                             
                             
@@ -196,6 +199,9 @@ struct PropertiesView: View {
                                 TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                     $0.id == self.userShape.id
                                 } ) ?? 0].renderFreq, formatter: NumberFormatter())
+                                    .foregroundColor(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].renderFreq > 0 ? .black : .pink)
                             }
                             
                         }
@@ -294,6 +300,9 @@ struct PropertiesView: View {
                                 TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                     $0.id == self.userShape.id
                                 } ) ?? 0].renderFreq, formatter: NumberFormatter())
+                                    .foregroundColor(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].renderFreq > 0 ? .black : .pink)
                             }
                         }
                         

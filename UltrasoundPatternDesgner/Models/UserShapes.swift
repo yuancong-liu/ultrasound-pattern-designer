@@ -38,6 +38,8 @@ struct UserShape: Hashable, Codable, Identifiable {
     var direction: Bool
     var renderFreq: Int
     
+    var problematic: Bool
+    
     mutating func setShown() {
         self.isShown = !self.isShown
     }
@@ -73,6 +75,8 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.direction = true
         self.renderFreq = 17
         
+        self.problematic = false
+        
         self.id = idUsed + 1
         idUsed += 1
         self.name = "Obejct" + "\(self.id)"
@@ -90,4 +94,5 @@ struct UserShape: Hashable, Codable, Identifiable {
 
 func clearCanvas(_ modelData: ModelData) -> Void {
     modelData.currentShapes = [UserShape]()
+    modelData.problematicObjects = [Int]()
 }

@@ -57,8 +57,17 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                Button(action: { checkProblematic(modelData) }) {
+                    Image(systemName: "app.badge.checkmark")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
+                }
+                
                 Button(action: {
-                    exportShapes(modelData.currentShapes)
+                    checkProblematic(modelData)
+                    if modelData.problematicObjects.isEmpty {
+                        exportShapes(modelData.currentShapes)
+                    }
                     self.showExportAlert = true
                 }) {
                     Image(systemName: "square.and.arrow.up")
