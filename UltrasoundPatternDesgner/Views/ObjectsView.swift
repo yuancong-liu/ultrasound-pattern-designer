@@ -20,6 +20,7 @@ struct ObjectsView: View {
                     .bold()
                     .font(.title2)
             }
+            .padding(.leading, 10)
             NavigationView{
                 List(modelData.currentShapes) { shape in
                     NavigationLink {
@@ -31,8 +32,8 @@ struct ObjectsView: View {
                 }
             }
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
+            .frame(minWidth: 300)
         }
-        .frame(minWidth: 300)
     }
 }
 

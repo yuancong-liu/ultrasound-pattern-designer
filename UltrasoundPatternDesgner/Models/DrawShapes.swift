@@ -17,14 +17,19 @@ func drawRectangle(_ userShape: UserShape) -> Path {
     return paths
 }
 
+
 func drawLine(_ userShape: UserShape) -> Path {
-    let paths = Path { path in
-        path.move(to: CGPoint(x: userShape.startingPoint.x, y: userShape.startingPoint.y))
-        path.addLine(to: CGPoint(x: userShape.endingPoint.x, y: userShape.endingPoint.y))
-    }
+    let paths =
+        userShape.startingPoint == userShape.endingPoint ? Path { path in
+            path.addEllipse(in: CGRect(x: userShape.startingPoint.x, y: userShape.startingPoint.y, width: 0, height: 0))
+        } : Path { path in
+            path.move(to: CGPoint(x: userShape.startingPoint.x, y: userShape.startingPoint.y))
+            path.addLine(to: CGPoint(x: userShape.endingPoint.x, y: userShape.endingPoint.y))
+        }
     
     return paths
 }
+
 
 func drawCircle(_ userShape: UserShape) -> Path {
     let paths = Path { path in

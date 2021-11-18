@@ -70,6 +70,7 @@ struct ContentView: View {
                 }
             }
             .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
+            .frame(height: 30)
             
             Divider()
             
@@ -93,6 +94,7 @@ struct ContentView: View {
                 
                 Divider()
                 ObjectsView()
+                    .frame(height: 435)
             }
         }
         

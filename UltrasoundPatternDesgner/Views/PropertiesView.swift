@@ -230,7 +230,9 @@ struct PropertiesView: View {
                                         $0.id == self.userShape.id
                                     } ) ?? 0].startingPoint.x && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
-                                    } ) ?? 0].startingPoint.x <= 400 ? .black : .pink)
+                                    } ) ?? 0].startingPoint.x <= 400 && !modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].checkOverlap() ? .black : .pink)
                             
                                 Spacer()
                                 
@@ -243,7 +245,9 @@ struct PropertiesView: View {
                                         $0.id == self.userShape.id
                                     } ) ?? 0].startingPoint.y && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
-                                    } ) ?? 0].startingPoint.y <= 400 ? .black : .pink)
+                                    } ) ?? 0].startingPoint.y <= 400 && !modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].checkOverlap() ? .black : .pink)
                             }
                             
                             // Point 2
@@ -260,7 +264,9 @@ struct PropertiesView: View {
                                         $0.id == self.userShape.id
                                     } ) ?? 0].endingPoint.x && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
-                                    } ) ?? 0].endingPoint.x <= 400 ? .black : .pink)
+                                    } ) ?? 0].endingPoint.x <= 400 && !modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].checkOverlap() ? .black : .pink)
                             
                                 Spacer()
                                 
@@ -273,7 +279,9 @@ struct PropertiesView: View {
                                         $0.id == self.userShape.id
                                     } ) ?? 0].endingPoint.y && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
-                                    } ) ?? 0].endingPoint.y <= 400 ? .black : .pink)
+                                    } ) ?? 0].endingPoint.y <= 400 && !modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].checkOverlap() ? .black : .pink)
                             }
                             
                             // Render

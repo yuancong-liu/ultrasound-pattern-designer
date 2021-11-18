@@ -79,6 +79,13 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.isShown = true
         self.shapeCategory = shapeCategory
     }
+    
+    func checkOverlap() -> Bool {
+        if self.startingPoint == self.endingPoint {
+            return true
+        }
+        return false
+    }
 }
 
 func clearCanvas(_ modelData: ModelData) -> Void {
