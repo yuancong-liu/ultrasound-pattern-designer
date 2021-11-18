@@ -45,6 +45,14 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }
                 
+                Divider()
+                        
+                Button(action: { clearCanvas(modelData) }) {
+                    Image(systemName: "trash.circle.fill")
+                        .imageScale(.medium)
+                        .foregroundColor(.blue)
+                }
+                
                 Spacer()
                 
                 Button(action: {

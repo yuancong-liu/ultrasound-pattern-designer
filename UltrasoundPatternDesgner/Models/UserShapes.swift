@@ -80,3 +80,7 @@ struct UserShape: Hashable, Codable, Identifiable {
         self.shapeCategory = shapeCategory
     }
 }
+
+func clearCanvas(_ modelData: ModelData) -> Void {
+    modelData.currentShapes = [UserShape]()
+}
