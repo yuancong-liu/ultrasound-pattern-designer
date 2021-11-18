@@ -29,9 +29,9 @@ struct ObjectsViewRow: View {
                         .imageScale(.medium)
             }
             
-            Text(modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+            Text(modelData.currentShapes.count != 0 ? modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                 $0.id == self.userShape.id
-            } ) ?? 0].name)
+            } ) ?? 0].name : "no")
             Spacer()
             Button(action: {
                 modelData.currentShapes.removeAll(where: {
@@ -44,10 +44,10 @@ struct ObjectsViewRow: View {
             .buttonStyle(.borderless)
 
             Button(action: {
-                modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                modelData.currentShapes.count != 0 ? { modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                     $0.id == self.userShape.id
                 } ) ?? 0].setShown()
-                self.userShape.setShown()
+                    self.userShape.setShown() }() : print("ok")
             }) {
                 if self.userShape.isShown {
                     Image(systemName: "eye.fill")
