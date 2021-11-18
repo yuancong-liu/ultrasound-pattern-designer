@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PropertiesView: View {
     
+    // TODO: modification assistance to be added.
+    
     @EnvironmentObject var modelData: ModelData
     @State var userShape: UserShape
     
