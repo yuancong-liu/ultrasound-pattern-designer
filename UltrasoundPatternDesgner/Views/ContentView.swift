@@ -22,6 +22,7 @@ struct ContentView: View {
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
+    
                 Button(action: {
                     modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), "rectangle"))
                 }) {
@@ -29,6 +30,7 @@ struct ContentView: View {
                         .imageScale(.medium)
                         .foregroundColor(.blue)
                 }
+                
                 Button(action: {
                     modelData.currentShapes.append(UserShape(CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), CGPoint(x: Int.random(in: 0...400), y: Int.random(in: 0...400)), "line"))
                 }) {
