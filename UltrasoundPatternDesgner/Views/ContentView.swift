@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @EnvironmentObject var modelData: ModelData
     @State var showExportAlert: Bool = false
+    @State var exportable: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -66,7 +67,10 @@ struct ContentView: View {
                 Button(action: {
                     checkProblematic(modelData)
                     if modelData.problematicObjects.isEmpty {
+                        self.exportable = true
                         exportShapes(modelData.currentShapes)
+                    } else {
+                        self.exportable = false
                     }
                     self.showExportAlert = true
                 }) {
@@ -75,9 +79,12 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                 }
                 .alert(isPresented: $showExportAlert) {
-                    Alert(title: Text("Exported!"),
-                          message: Text("\(modelData.currentShapes.count) shapes in total!\n"),
-                          dismissButton: .default(Text("OK!")))
+                    let title = exportable ? Text("Exported!") : Text("Error!")
+                    let message = exportable ? Text("\(modelData.currentShapes.count) shapes in total!\n") : Text("Something wrong with your shapes!")
+                    
+                    return Alert(title: title,
+                              message: message,
+                              dismissButton: .default(Text("OK!")))
                 }
             }
             .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
