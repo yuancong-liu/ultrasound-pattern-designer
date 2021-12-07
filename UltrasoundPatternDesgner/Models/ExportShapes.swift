@@ -18,63 +18,177 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
     
     
     fileHandle.write("""
-                        #include <cmath>
-                        #include <iostream>
-                        #include <chrono>
-                        #include <thread>
-                        #include <string>
-                        
-                        #include "UltrahapticsTimePointStreaming.hpp"
-                        
-                        #ifndef M_PI
-                        #define M_PI 3.14159265358979323
-                        #endif
-                        
                         using Seconds = std::chrono::duration;<float>;
-                        
                         static auto start_time = std::chrono::steady_clock::now();
                         
-                        // Structure for passing information on the type of point to create
-                        struct Circle
-                        {
-                            // The position of the control point
-                            Ultrahaptics::Vector3 position;
-                            
-                            // The intensity of the control point
-                            float intensity;
-                            
-                            // The radius of the circle
-                            float radius;
-                            
-                            // The frequency at which the control point goes around the circle
-                            float frequency;
-                            
-                            
-                            const Ultrahaptics::Vector3 evaluateAt(Seconds t){
-                                // Calculate the x and y positions of the circle and set the height
-                                position.x = std::cos(2 * M_PI * frequency * t.count()) * radius;
-                                position.y = std::sin(2 * M_PI * frequency * t.count()) * radius;
-                                return position;
-                            }
-                        };\n
+                        \n
+                        
                         """.data(using: .ascii)!)
     
-    var noRect: Int = 0
-    var noCir: Int = 0
-    var noLine: Int = 0
+    var flagRect: Bool = false
+    var flagCir: Bool = false
+    var flagLine: Bool = false
     
     for shape in userShapes {
-        
-
-        
-        
         switch shape.shapeCategory {
             case "rectangle":
-                noRect += 1
+                if !flagRect {
+                    flagRect = true
+                    fileHandle.write("""
+                                        struct Rectangle
+                                        {
+                                            Ultrahaptics::Vector3 position;
+                                            
+                                            float intensity;
+                                            
+                                            float frequency;
+                                            
+                                            float width;
+                                            float height;
+                                            float topLeftX;
+                                            float topLeftY;
+                                            
+                                            const Ultrahaptics::Vector3 evaluateAt(Seconds t){
+                                                float period = 1 / frequency;
+                                                float halfPeriod = period / 2;
+                                                float coef = (width + height) / halfPeriod;
+                                                float tInPeriod = t.count() % period;
+                                                
+                                                if (tInPeriod >= 0 && tInPeriod <  halfPeriod) {
+                                                    if (position.x < width + topLeftX) {
+                                                        position.x = coef * tInPeriod + topLeftX;
+                                                        position.y = topLeftY;
+                                                    } else {
+                                                        position.x = width + topLeftX;
+                                                        position.y = -height + coef * tInPeriod + topLeftY;
+                                                    }
+                                                } else {
+                                                    if (position.x > topLeftX) {
+                                                        position.x = 2 * width + height - coef * tInPeriod + topLeftX;
+                                                        position.y = height + topLeftY;
+                                                    } else {
+                                                        position.x = topLeftX;
+                                                        position.y = 2 * width + 2 * height - coef * tInPeriod + topLeftY;
+                                                    }
+                                                }
+                                                return position;
+                                            }
+                                        };
+                                        
+                                        void emitter_callback_rectangle(const Ultrahaptics::TimePointStreaming::Emitter &timepoint_emitter,
+                                        Ultrahaptics::TimePointStreaming::OutputInterval &interval,
+                                        const Ultrahaptics::HostTimePoint &submission_deadline,
+                                        void *user_pointer)
+                                        {
+                                            Rectangle *rectangle = static_cast<Rectangle*>(user_pointer);
+                                            
+                                            for (auto& sample : interval) {
+                                                const Seconds t = sample - start_time;
+                                                const Ultrahaptics::Vector3 position = rectangle->evaluateAt(t);
+                                                
+                                                sample.persistentControlPoint(0).setPosition(position);
+                                                sample.persistentControlPoint(0).setIntensity(rectangle->intensity);
+                                            }
+                                        }
+                                        \n\n\n
+                                        """.data(using: .ascii)!)
+                }
+                
             case "circle":
-                noCir += 1
+                if !flagCir {
+                    flagCir = true
+                    fileHandle.write("""
+                                        struct Circle
+                                        {
+                                            Ultrahaptics::Vector3 position;
+                                            
+                                            float intensity;
+                                            
+                                            float frequency;
+                                            
+                                            float radius;
+                                            float centreX;
+                                            float centreY;
+                                            
+                                            const Ultrahaptics::Vector3 evaluateAt(Seconds t){
+                                                position.x = std::cos(2 * M_PI * frequency * t.count()) * radius + centerX;
+                                                position.y = std::sin(2 * M_PI * frequency * t.count()) * radius + centreY;
+                                                return position;
+                                            }
+                                        };
+                                        
+                                        // callback functions
+                                        void emitter_callback_circle(const Ultrahaptics::TimePointStreaming::Emitter &timepoint_emitter,
+                                        Ultrahaptics::TimePointStreaming::OutputInterval &interval,
+                                        const Ultrahaptics::HostTimePoint &submission_deadline,
+                                        void *user_pointer)
+                                        {
+                                            Circle *circle = static_cast<Circle*>(user_pointer);
+                                            
+                                            for (auto& sample : interval) {
+                                                const Seconds t = sample - start_time;
+                                                const Ultrahaptics::Vector3 position = circle->evaluateAt(t);
+                                                
+                                                sample.persistentControlPoint(0).setPosition(position);
+                                                sample.persistentControlPoint(0).setIntensity(circle->intensity);
+                                            }
+                                        }
+                                        \n\n\n
+                                        """.data(using: .ascii)!)
+                }
             case "line":
-                noLine += 1
+                if !flagLine {
+                    flagLine = true
+                    fileHandle.write("""
+                                        struct Line
+                                        {
+                                            Ultrahaptics::Vector3 position;
+                                            
+                                            float intensity;
+                                            
+                                            float frequency;
+                                            
+                                            float startingX;
+                                            float startingY;
+                                            float endingX;
+                                            float endingY;
+                                            
+                                            const Ultrahaptics::Vector3 evaluateAt(Seconds t){
+                                                float period = 1 / frequency;
+                                                float halfPeriod = period / 2;
+                                                float coefX = (endingX - startingX) / halfPeriod;
+                                                float coefY = (endingY - startingY) / halfPeriod;
+                                                float tInPeriod = t.count() % period;
+                                                
+                                                if (tInPeriod >= 0 && tInPeriod < halfPeriod) {
+                                                    position.x = startingX + coefX * tInPeriod;
+                                                    position.y = startingY + coefY * tInPeriod;
+                                                } else {
+                                                    position.x = endingX - coefX * tInPeriod;
+                                                    position.y = endingY - coefY * tInPeriod;
+                                                }
+                                                return position;
+                                            }
+                                        };
+                                        
+                                        void emitter_callback_line(const Ultrahaptics::TimePointStreaming::Emitter &timepoint_emitter,
+                                        Ultrahaptics::TimePointStreaming::OutputInterval &interval,
+                                        const Ultrahaptics::HostTimePoint &submission_deadline,
+                                        void *user_pointer)
+                                        {
+                                            Line *line = static_cast<Line*>(user_pointer);
+                                            
+                                            for (auto& sample : interval) {
+                                                const Seconds t = sample - start_time;
+                                                const Ultrahaptics::Vector3 position = line->evaluateAt(t);
+                                                
+                                                sample.persistentControlPoint(0).setPosition(position);
+                                                sample.persistentControlPoint(0).setIntensity(line->intensity);
+                                            }
+                                        }
+                                        \n\n\n
+                                        """.data(using: .ascii)!)
+                }
             default:
                 continue
         }
@@ -82,10 +196,6 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
     
     try? fileHandle.close()
     
-//    if let content = try? String(contentsOfFile: path, encoding: .utf8) {
-//        print(content)
-//    }
+    print(NSHomeDirectory())
 
-    
-    
 }
