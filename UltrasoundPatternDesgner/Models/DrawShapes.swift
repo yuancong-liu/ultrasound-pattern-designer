@@ -33,7 +33,7 @@ func drawLine(_ userShape: UserShape) -> Path {
 
 func drawCircle(_ userShape: UserShape) -> Path {
     let paths = Path { path in
-        path.addEllipse(in: CGRect(x: userShape.position.x, y: userShape.position.y, width: userShape.width, height: userShape.width))
+        path.addEllipse(in: CGRect(x: userShape.position.x, y: userShape.position.y, width: userShape.radius * 2, height: userShape.radius * 2))
     }
     
     return paths

@@ -19,10 +19,14 @@ struct UserShape: Hashable, Codable, Identifiable {
     
     var width: Double
     var height: Double
+    var radius: Double
     
     var position: Coordinates
     var startingPoint: Coordinates
     var endingPoint: Coordinates
+    var centre: Coordinates
+    
+    var positionZ: Double
     
     struct Coordinates: Hashable, Codable {
         var x: Double
@@ -34,7 +38,6 @@ struct UserShape: Hashable, Codable, Identifiable {
         }
     }
 
-    var rotation: Double
     var direction: Bool
     var renderFreq: Int
     
@@ -48,6 +51,7 @@ struct UserShape: Hashable, Codable, Identifiable {
     init(_ startingPoint: CGPoint, _ endingPoint: CGPoint, _ shapeCategory: String) {
         self.width = abs(startingPoint.x - endingPoint.x)
         self.height = abs(startingPoint.y - endingPoint.y)
+        self.radius = width / 2
         
         // check if width and height is in the range
         if self.width > 100 {
@@ -68,10 +72,11 @@ struct UserShape: Hashable, Codable, Identifiable {
         
         self.startingPoint = Coordinates(startingPoint.x, startingPoint.y)
         self.endingPoint = Coordinates(endingPoint.x, endingPoint.y)
+        self.centre = Coordinates((startingPoint.x + endingPoint.x) / 2, (endingPoint.y - startingPoint.y) / 2)
 
         self.position = Coordinates(min(self.startingPoint.x, self.endingPoint.x), min(self.startingPoint.y, self.endingPoint.y))
+        self.positionZ = 100
         
-        self.rotation = 0.0
         self.direction = true
         self.renderFreq = 17
         

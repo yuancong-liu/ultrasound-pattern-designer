@@ -19,21 +19,17 @@ struct UserCanvas: View {
                         case "circle":
                             drawCircle(shape)
                                 .stroke(lineWidth: 3)
-                                .rotationEffect(.degrees(shape.rotation))
                                 .foregroundColor(modelData.problematicObjects.contains(shape.id) ? .pink : .black)
                         case "line":
                             drawLine(shape)
                                 .stroke(lineWidth: 3)
-                                .rotationEffect(.degrees(shape.rotation))
                                 .foregroundColor(modelData.problematicObjects.contains(shape.id) ? .pink : .black)
                         case "rectangle":
                             drawRectangle(shape).stroke(lineWidth: 3)
-                                .rotationEffect(.degrees(shape.rotation))
                                 .foregroundColor(modelData.problematicObjects.contains(shape.id) ? .pink : .black)
                         default:
                             drawCircle(shape)
                                 .stroke(lineWidth: 3)
-                                .rotationEffect(.degrees(shape.rotation))
                                 .foregroundColor(modelData.problematicObjects.contains(shape.id) ? .pink : .black)
                     }
                 }

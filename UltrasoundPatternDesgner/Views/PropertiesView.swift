@@ -95,6 +95,19 @@ struct PropertiesView: View {
                                     } ) ?? 0].position.y && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
                                     } ) ?? 0].position.y <= 400 ? .black : .pink)
+                                
+                                Spacer()
+                                
+                                // z
+                                Text("z:")
+                                TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                    $0.id == self.userShape.id
+                                } ) ?? 0].positionZ, formatter: NumberFormatter())
+                                    .foregroundColor(100 <= modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].positionZ && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].positionZ <= 400 ? .black : .pink)
                             }
                             
                             // Render
@@ -146,12 +159,12 @@ struct PropertiesView: View {
                                 Text("Radius:")
                                 TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                     $0.id == self.userShape.id
-                                } ) ?? 0].width, formatter: NumberFormatter())
+                                } ) ?? 0].radius, formatter: NumberFormatter())
                                     .foregroundColor(10 <= modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
-                                    } ) ?? 0].width && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                    } ) ?? 0].radius && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
-                                    } ) ?? 0].width <= 100 ? .black : .pink)
+                                    } ) ?? 0].radius <= 100 ? .black : .pink)
                             }
                             
                             // Position
@@ -181,6 +194,19 @@ struct PropertiesView: View {
                                     } ) ?? 0].position.y && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
                                         $0.id == self.userShape.id
                                     } ) ?? 0].position.y <= 400 ? .black : .pink)
+                                
+                                Spacer()
+                                
+                                // z
+                                Text("z:")
+                                TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                    $0.id == self.userShape.id
+                                } ) ?? 0].positionZ, formatter: NumberFormatter())
+                                    .foregroundColor(100 <= modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].positionZ && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].positionZ <= 400 ? .black : .pink)
                             }
                             
                             // Render
@@ -291,6 +317,24 @@ struct PropertiesView: View {
                                         $0.id == self.userShape.id
                                     } ) ?? 0].checkOverlap() ? .black : .pink)
                             }
+                            
+                            // Z position
+                            Text("Z position").bold()
+                            HStack {
+                                
+                                // z
+                                Text("z:")
+                                TextField("number", value: $modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                    $0.id == self.userShape.id
+                                } ) ?? 0].positionZ, formatter: NumberFormatter())
+                                    .foregroundColor(100 <= modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].positionZ && modelData.currentShapes[modelData.currentShapes.firstIndex(where: {
+                                        $0.id == self.userShape.id
+                                    } ) ?? 0].positionZ <= 400 ? .black : .pink)
+                            }
+                            
+                            
                             
                             // Render
                             Text("Render").bold()
