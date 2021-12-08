@@ -197,5 +197,7 @@ func exportShapes(_ userShapes: [UserShape]) -> Void {
     try? fileHandle.close()
     
     print(NSHomeDirectory())
+    
+    NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: path)
 
 }
